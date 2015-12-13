@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1052.3622 744.09448"
+   id="svg3527"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="gui.svg">
+  <defs
+     id="defs3529" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.72604714"
+     inkscape:cx="701.20924"
+     inkscape:cy="413.14712"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="773"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3532">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect3535"
+       width="1056.4053"
+       height="162.52388"
+       x="-1.377321"
+       y="889.83832" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+       id="rect3537"
+       width="196.95691"
+       height="581.22949"
+       x="862.20294"
+       y="308.60886" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="881.48547"
+       y="337.53259"
+       id="text3539"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3541"
+         x="881.48547"
+         y="337.53259">helth: 58%, arm wounded</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="882.86279"
+       y="352.68311"
+       id="text3543"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3545"
+         x="882.86279"
+         y="352.68311">stamina: 34%, drained</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="888.37207"
+       y="546.88538"
+       id="text3547"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3549"
+         x="888.37207"
+         y="546.88538">Percs:</tspan><tspan
+         sodipodi:role="line"
+         x="888.37207"
+         y="562.51038"
+         id="tspan3551">1. Dragon Roar</tspan><tspan
+         sodipodi:role="line"
+         x="888.37207"
+         y="578.13538"
+         id="tspan3553">2. Hard Punch</tspan><tspan
+         sodipodi:role="line"
+         x="888.37207"
+         y="593.76038"
+         id="tspan3555">3. Cleev</tspan><tspan
+         sodipodi:role="line"
+         x="888.37207"
+         y="609.85162"
+         id="tspan3561">4. -</tspan><tspan
+         sodipodi:role="line"
+         x="888.37207"
+         y="625.01038"
+         id="tspan3565">   1. Mighty Bush</tspan><tspan
+         sodipodi:role="line"
+         x="888.37207"
+         y="640.63538"
+         id="tspan3567">   2. Blink</tspan><tspan
+         sodipodi:role="line"
+         x="888.37207"
+         y="656.26038"
+         id="tspan3569">   3. Throw Dugger</tspan><tspan
+         sodipodi:role="line"
+         x="888.37207"
+         y="672.35162"
+         id="tspan3571">5. +</tspan><tspan
+         sodipodi:role="line"
+         x="888.37207"
+         y="687.97662"
+         id="tspan3563" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="892.50403"
+       y="699.76801"
+       id="text3573"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3575"
+         x="892.50403"
+         y="699.76801">Targets:</tspan><tspan
+         sodipodi:role="line"
+         x="892.50403"
+         y="715.39301"
+         id="tspan3577">1. Goblin</tspan><tspan
+         sodipodi:role="line"
+         x="892.50403"
+         y="731.01801"
+         id="tspan3579">2. Orc</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="881.48547"
+       y="367.83365"
+       id="text3585"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3587"
+         x="881.48547"
+         y="367.83365">Status:</tspan><tspan
+         sodipodi:role="line"
+         x="881.48547"
+         y="383.45865"
+         id="tspan3589"> burning</tspan><tspan
+         sodipodi:role="line"
+         x="881.48547"
+         y="399.08365"
+         id="tspan3591"> drained</tspan><tspan
+         sodipodi:role="line"
+         x="881.48547"
+         y="414.70865"
+         id="tspan3438"> hungry</tspan></text>
+  </g>
+</svg>

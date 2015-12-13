@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1052.3622 744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="input.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="642.17778"
+     inkscape:cy="383.06152"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-grids="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:object-paths="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <g
+       id="g3404"
+       transform="translate(43.091373,-226.86302)">
+      <ellipse
+         ry="57.578693"
+         rx="67.175148"
+         cy="805.88501"
+         cx="100.51018"
+         id="path3392"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3394"
+         y="815.98651"
+         x="42.426407"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="815.98651"
+           x="42.426407"
+           id="tspan3396"
+           sodipodi:role="line">GameState</tspan></text>
+    </g>
+    <g
+       id="g3409"
+       transform="translate(69.355339,-241.00515)">
+      <ellipse
+         ry="55.558392"
+         rx="60.609154"
+         cy="810.93573"
+         cx="504.06613"
+         id="path3398"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3400"
+         y="818.00684"
+         x="462.64987"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="818.00684"
+           x="462.64987"
+           id="tspan3402"
+           sodipodi:role="line">GuiState</tspan></text>
+    </g>
+    <g
+       id="g3420"
+       transform="translate(70.365492,-195.54829)">
+      <ellipse
+         ry="54.548237"
+         rx="61.619305"
+         cy="1026.0983"
+         cx="306.07623"
+         id="path3414"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3416"
+         y="1034.1794"
+         x="248.49751"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="1034.1794"
+           x="248.49751"
+           id="tspan3418"
+           sodipodi:role="line">TargetState</tspan></text>
+    </g>
+    <g
+       id="g3435"
+       transform="translate(-90.913729,-460.62956)">
+      <ellipse
+         ry="66.670067"
+         rx="74.246216"
+         cy="995.79364"
+         cx="-47.982246"
+         id="path3429"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3431"
+         y="1004.885"
+         x="-96.97464"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="1004.885"
+           x="-96.97464"
+           id="tspan3433"
+           sodipodi:role="line">TextState</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="103.55838"
+       y="344.06247"
+       id="text3452"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3454"
+         x="103.55838"
+         y="344.06247">read input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="114.67006"
+       y="361.25537"
+       id="text3456"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3458"
+         x="114.67006"
+         y="361.25537">if input is action-based</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="130.83249"
+       y="375.3772"
+       id="text3460"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3462"
+         x="130.83249"
+         y="375.3772">if character is not buisy</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="168.14722"
+       y="428.91528"
+       id="text3464"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3466"
+         x="168.14722"
+         y="428.91528">create action, and put it into time line</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 209.76654,581.04227 510.792,573.9712"
+       id="path3468"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 496.64986,557.80876 17.1726,17.17259"
+       id="path3470"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 497.66002,588.11334 511.80215,573.9712"
+       id="path3472"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 182.49242,627.50929 331.995,792.16415"
+       id="path3474"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 336.0356,766.91034 -4.0406,27.27412"
+       id="path3476"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 305.71073,793.1743 24.24366,0"
+       id="path3478"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="101.68021"
+       y="468.04727"
+       id="text3480"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3482"
+         x="101.68021"
+         y="468.04727">run AI</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="101.68021"
+       y="480.1691"
+       id="text3484"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3486"
+         x="101.68021"
+         y="480.1691">perform one time line step</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="184.85793"
+       y="722.0423"
+       id="text3488"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3490"
+         x="184.85793"
+         y="722.0423" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="228.84648"
+       y="576.08527"
+       id="text3492"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.99983919,-0.01793281,0.01793281,0.99983919,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3494"
+         x="228.84648"
+         y="576.08527">if input is gui-based go to GuiState</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="521.90369"
+       y="507.30118"
+       id="text3496"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3498"
+         x="521.90369"
+         y="507.30118">shows GUIPanel</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="100.69037"
+       y="494.31131"
+       id="text3500"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3502"
+         x="100.69037"
+         y="494.31131">applay event from time line, delay</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="637.0611"
+       y="523.46362"
+       id="text3504"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3506"
+         x="637.0611"
+         y="523.46362">read input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="174.75639"
+       y="569.50928"
+       id="text3383"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3385"
+         x="174.75639"
+         y="569.50928" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="151.03555"
+       y="391.53967"
+       id="text3387"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3389"
+         x="151.03555"
+         y="391.53967">if action needs target on field</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="167.198"
+       y="403.6615"
+       id="text3391"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3393"
+         x="167.198"
+         y="403.6615">go to TargetState</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="150.04572"
+       y="416.75287"
+       id="text3395"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3397"
+         x="150.04572"
+         y="416.75287">else </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="595.15485"
+       y="262.6347"
+       id="text3399"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.65526923,0.75539541,-0.75539541,0.65526923,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3401"
+         x="595.15485"
+         y="262.6347">if action-based and needs target</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="424.92905"
+       y="756.80884"
+       id="text3403"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3405"
+         x="424.92905"
+         y="756.80884">read input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="453.21332"
+       y="771.96112"
+       id="text3407"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3409"
+         x="453.21332"
+         y="771.96112">if confirm</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="468.3656"
+       y="783.07275"
+       id="text3411"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3413"
+         x="468.3656"
+         y="783.07275" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="288.90363"
+       y="433.1387"
+       id="text3415"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3417"
+         x="288.90363"
+         y="433.1387" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="474.42651"
+       y="785.09308"
+       id="text3419"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3421"
+         x="474.42651"
+         y="785.09308">create action an put it into time line</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="455.23361"
+       y="813.19458"
+       id="text3423"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3425"
+         x="455.23361"
+         y="813.19458">if reject (ESC)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="477.45697"
+       y="826.3266"
+       id="text3427"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3429"
+         x="477.45697"
+         y="826.3266">go to previus state phase 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="456.26407"
+       y="840.4281"
+       id="text3432"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3434"
+         x="456.26407"
+         y="840.4281">if move cursor, move cursor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="455.27423"
+       y="855.6413"
+       id="text3436"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3438"
+         x="455.27423"
+         y="855.6413">if switch target, move cursor to next target</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 79.456865,452.75289 78.446712,322.44321 66.324882,428.50923 79.456865,451.74274 80.467017,514.3722 66.324882,489.11839 Z"
+       id="path3461"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="10.121831"
+       y="432.46863"
+       id="text3463"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3465"
+         x="10.121831"
+         y="432.46863">1 phase</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="12.121831"
+       y="494.14886"
+       id="text3467"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3469"
+         x="12.121831"
+         y="494.14886">2 phase</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="476.73108"
+       y="798.2251"
+       id="text3471"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3473"
+         x="476.73108"
+         y="798.2251">go to GameState phase 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="662.59918"
+       y="540.61584"
+       id="text3475"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3477"
+         x="662.59918"
+         y="540.61584">if gui-based show panel</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="663.60931"
+       y="555.78845"
+       id="text3479"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3481"
+         x="663.60931"
+         y="555.78845">if action based</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="678.7616"
+       y="571.9306"
+       id="text3483"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3485"
+         x="678.7616"
+         y="571.9306">if needs target go to TargetState</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="679.77173"
+       y="586.11334"
+       id="text3487"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3489"
+         x="679.77173"
+         y="586.11334">else create action and put it into timeline </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="707.0459"
+       y="602.25549"
+       id="text3491"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3493"
+         x="707.0459"
+         y="602.25549">return to GameState phase 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="117.03556"
+       y="441.1387"
+       id="text3495"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3497"
+         x="117.03556"
+         y="441.1387">if input is gui-based go to GuiState</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="664.70068"
+       y="621.02704"
+       id="text3505"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3507"
+         x="664.70068"
+         y="621.02704">if gui-action perform gui action</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="664.70068"
+       y="635.18951"
+       id="text3509"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3511"
+         x="664.70068"
+         y="635.18951">if close (ESC) go to previus state (phase 1)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="101.03556"
+       y="507.88998"
+       id="text3513"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3515"
+         x="101.03556"
+         y="507.88998">if event is dialog go to DialogState</tspan></text>
+    <g
+       id="g3535">
+      <ellipse
+         ry="69.700523"
+         rx="76.266518"
+         cy="964.47894"
+         cx="95.459404"
+         id="path3517"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3519"
+         y="972.56018"
+         x="24.243662"
+         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px"
+           y="972.56018"
+           x="24.243662"
+           id="tspan3521"
+           sodipodi:role="line">DialogueState</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 129.29953,636.17935 -24.24366,257.5889 22.22335,-13.13198"
+       id="path3528"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 89.903577,877.60581 15.152293,16.16244"
+       id="path3530"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="187.88837"
+       y="902.85962"
+       id="text3540"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3542"
+         x="187.88837"
+         y="902.85962">read input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="90.913727"
+       y="320.00162"
+       id="text3438"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3440"
+         x="90.913727"
+         y="320.00162" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="88.893425"
+       y="314.95084"
+       id="text3442"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3444"
+         x="88.893425"
+         y="314.95084" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="89.90358"
+       y="316.97116"
+       id="text3446"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3448"
+         x="89.90358"
+         y="316.97116" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="95.88327"
+       y="332.00162"
+       id="text3450"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3452"
+         x="95.88327"
+         y="332.00162">if can read input</tspan></text>
+    <g
+       id="g3461">
+      <ellipse
+         ry="63.134533"
+         rx="70.205605"
+         cy="973.06519"
+         cx="378.30212"
+         id="path3454"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3457"
+         y="982.56012"
+         x="326.23865"
+         style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px"
+           y="982.56012"
+           x="326.23865"
+           id="tspan3459"
+           sodipodi:role="line">SelectStat</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 294.96454,753.35705 c -2.38515,2.98244 -5.57263,5.21427 -8.08122,8.08122 -4.29754,4.91148 -7.94612,10.46445 -11.11167,16.16245 -0.73131,1.31634 -1.2732,2.73316 -2.02031,4.04061 -0.13135,0.22986 -2.90786,4.06994 -3.03046,5.05076 -0.25059,2.0047 0.20103,4.05063 0,6.06091 -0.13814,1.38144 -0.81381,2.66624 -1.01015,4.04061 -0.14286,1 0.16607,2.03405 0,3.03046 -0.17505,1.05031 -0.8351,1.98015 -1.01015,3.03046 -0.16607,0.99641 0,2.0203 0,3.03046 -0.33672,1.01015 -0.80133,1.98634 -1.01015,3.03045 -0.13208,0.66036 0,1.34687 0,2.02031 0,1.34687 0,2.69374 0,4.04061 0,1.34687 -0.19048,2.70728 0,4.04061 0.15058,1.05409 0.89256,1.97218 1.01015,3.03046 0.2231,2.00795 -0.20103,4.05063 0,6.06091 0.13814,1.38143 0.67343,2.69374 1.01015,4.04061 0.33672,1.34687 0.67344,2.69374 1.01015,4.04061 0.066,0.26399 1.49333,6.41235 2.02031,7.07107 0.75841,0.94802 2.27204,1.07229 3.03046,2.02031 0.66517,0.83146 0.53396,2.07807 1.01015,3.03045 2.43795,3.65693 1.47736,1.94458 3.03046,5.05077 1.49077,2.98155 3.37031,7.94904 6.06091,10.10152 0.52587,0.42069 1.41797,-0.30117 2.02031,0 0.85183,0.42592 1.27662,1.42536 2.0203,2.02031 0.94802,0.75841 2.08244,1.26189 3.03046,2.0203 0.74368,0.59495 1.34687,1.34687 2.0203,2.02031 0.67344,0.67343 1.44888,1.2584 2.02031,2.0203 0.45175,0.60234 0.5584,1.41797 1.01015,2.02031 1.53162,2.04216 1.97571,1.998 4.04061,3.03045 0.67344,0.33672 1.48791,0.47776 2.02031,1.01016 0.53239,0.53239 0.5584,1.41796 1.01015,2.0203 0.57143,0.76191 1.44888,1.2584 2.0203,2.02031 0.45176,0.60234 0.59251,1.39383 1.01016,2.0203 0.26414,0.39622 0.67343,0.67344 1.01015,1.01016 0.33672,0.33671 0.61394,0.746 1.01015,1.01015 0.62647,0.41764 1.39384,0.5925 2.02031,1.01015 0.42008,0.28006 3.85996,3.67932 4.04061,4.04061 0.15058,0.30117 -0.2381,0.77206 0,1.01015 0.53239,0.5324 1.60266,0.38369 2.0203,1.01016 0.12192,0.18288 -0.11029,3.48914 0,4.04061 0.20883,1.04411 0.80133,1.98634 1.01016,3.03045 0.13207,0.66036 -0.16334,1.36698 0,2.02031 0.18261,0.73044 0.77205,1.30602 1.01015,2.0203 0.10648,0.31944 -0.15059,0.70899 0,1.01016 0.21296,0.42591 0.79719,0.58423 1.01015,1.01015 0.30117,0.60234 -0.30117,1.41797 0,2.0203 0.21296,0.42592 0.79719,0.58424 1.01015,1.01016 0.15059,0.30117 -0.10648,0.69071 0,1.01015 0.33685,1.01053 1.68347,3.03008 2.02031,4.04061 0.10648,0.31944 0,0.67343 0,1.01015 0.33672,0.33672 0.79719,0.58424 1.01015,1.01015 0.15059,0.30117 -0.23809,0.77206 0,1.01016 0.2381,0.23809 0.77206,-0.2381 1.01015,0 0.47619,0.47619 -0.47619,1.54411 0,2.0203 0.2381,0.2381 0.85957,-0.30117 1.01016,0 0.30998,0.61998 -0.3131,4.42457 0,5.05076 0.21295,0.42592 0.67343,0.67344 1.01015,1.01016 0.33672,0.33671 0.67343,0.67343 1.01015,1.01015"
+       id="path3466"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="440.42651"
+       y="906.90021"
+       id="text3468"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3470"
+         x="440.42651"
+         y="906.90021">read input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="463.66003"
+       y="921.04236"
+       id="text3472"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3474"
+         x="463.66003"
+         y="921.04236">if select go to ContextState</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="464.67017"
+       y="937.20477"
+       id="text3476"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3478"
+         x="464.67017"
+         y="937.20477">if move cursor - move cursor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="463.66003"
+       y="951.34692"
+       id="text3481"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3483"
+         x="463.66003"
+         y="951.34692">if reject (ESC) go to previous state</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="462.64987"
+       y="966.49921"
+       id="text3485"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3487"
+         x="462.64987"
+         y="966.49921">if switch taget, move cursor to next target</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="425.27423"
+       y="330.10315"
+       id="text3489"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3491"
+         x="425.27423"
+         y="330.10315">read input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="437.39606"
+       y="343.23511"
+       id="text3493"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3495"
+         x="437.39606"
+         y="343.23511">if mouse move - move cursor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="437.39606"
+       y="354.3468"
+       id="text3497"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3499"
+         x="437.39606"
+         y="354.3468">if mouse left click create conext-based mouse action</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="436.38589"
+       y="366.44833"
+       id="text3501"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3503"
+         x="436.38589"
+         y="366.44833">if mouse right pressed - show info</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="436.3656"
+       y="378.54984"
+       id="text3506"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3508"
+         x="436.3656"
+         y="378.54984">if mouse right released - hide info</tspan></text>
+  </g>
+</svg>
