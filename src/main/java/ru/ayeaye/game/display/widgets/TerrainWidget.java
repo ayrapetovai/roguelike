@@ -72,7 +72,7 @@ public class TerrainWidget extends Widget {
 //				counter ++;
 			}
 		}
-//		System.out.println("visited " + counter);
+//		log.debug("visited " + counter);
 	}
 	
 	public void setGameField(GameField gameField) {

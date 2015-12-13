@@ -25,7 +25,7 @@ public class PlayMenuState extends MenuState {
 		addMenuOption("[S]ave game and return to main menu",
 				()-> {
 					if (container.getInput().isKeyPressed(Input.KEY_S)) {
-						System.out.println("Save game");
+						log.debug("Save game");
 						game.enterState(MainMenuState.ID);
 					}
 				});

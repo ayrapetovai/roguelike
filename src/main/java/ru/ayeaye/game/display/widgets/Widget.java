@@ -2,11 +2,15 @@ package ru.ayeaye.game.display.widgets;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.display.controller.WidgetController;
 import ru.ayeaye.game.display.layouts.AbstractLayout;
 
 public class Widget {
+	
+	protected final Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	/**
 	 * Имя виджета, для удобства
@@ -114,7 +118,7 @@ public class Widget {
 	}
 	
 	public void dispatchMouseEvent(int mouseButton, int modifier, int mouseX, int mouseY, int absoluteX, int absoluteY, int minWidth, int minHeight) {
-		if (mouseButton == 0) System.out.println("Widget " + name + " dispatching mouse " + mouseX + ": " + mouseY);
+		if (mouseButton == 0) log.debug("Widget " + name + " dispatching mouse " + mouseX + ": " + mouseY);
 		if (contextWidget != null && contextWidget.isVisible()) {
 			if (!contextWidget.isVisible() || contextWidget.isFolowMouse()) {
 				int fix = -15;
@@ -133,7 +137,7 @@ public class Widget {
 		} else if (layout != null) {
 			layout.dispatchMouseEvent(mouseButton, modifier, mouseX, mouseY, absoluteX, absoluteY, Math.min(width, minWidth), Math.min(height, minHeight));
 		} else {
-			if (mouseButton == 0) System.out.println("Widget " + name + " ends mouse dispatching");
+			if (mouseButton == 0) log.debug("Widget " + name + " ends mouse dispatching");
 			if (controller != null)
 				controller.handleMouse(this, mouseButton, modifier, mouseX, mouseY, absoluteX, absoluteY, Math.min(width, minWidth), Math.min(height, minHeight));
 		}
@@ -142,7 +146,7 @@ public class Widget {
 	}
 	
 	public void endDispatchMouseEvent() {
-		System.out.println(getName() + ": endDispatchingMouse");
+		log.debug(getName() + ": endDispatchingMouse");
 		if (layout != null) {
 			layout.endDispatchMouseEvent();
 		}
@@ -155,13 +159,13 @@ public class Widget {
 	}
 	
 	public void dispatchKeyEvent(int keyCode, int modifier) {
-		System.out.println("Widget " + name + " dispatching key");
+		log.debug("Widget " + name + " dispatching key");
 		if (contextWidget != null && contextWidget.isVisible()) {
 			contextWidget.dispatchKeyEvent(keyCode, modifier);
 		} else if (layout != null) {
 			layout.dispatchKeyEvent(keyCode, modifier);
 		} else if (controller != null) {
-			System.out.println("Widget " + name + " ends key dispatching");
+			log.debug("Widget " + name + " ends key dispatching");
 			controller.handleKey(this, keyCode, modifier);
 		}
 	}

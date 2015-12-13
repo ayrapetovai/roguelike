@@ -52,7 +52,7 @@ public class ButtonWidget extends Widget {
 	public void dispatchMouseEvent(int mouseButton, int modifier, int mouseX, int mouseY, int absoluteX, int absoluteY, int minWidth, int minHeight) {
 		mouseOver = true;
 		if (mouseButton == Input.MOUSE_LEFT_BUTTON) {
-			System.out.println("Button " + getName() + " activeted, modifier: " + modifier);
+			log.debug("Button " + getName() + " activeted, modifier: " + modifier);
 		}
 	}
 	

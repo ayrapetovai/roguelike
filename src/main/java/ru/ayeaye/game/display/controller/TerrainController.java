@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.newdawn.slick.Input;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.display.ImageConstants;
 import ru.ayeaye.game.display.widgets.Widget;
@@ -17,6 +19,8 @@ import ru.ayeaye.game.model.GameField;
 
 public class TerrainController extends WidgetController {
 
+	private static final Logger log = LoggerFactory.getLogger(TerrainController.class);
+	
 	private static Map<Integer, PlayerCommand> keyMapping;
 	private static Map<Integer, Direction> keyDirectionMapping;
 	static {
@@ -64,7 +68,7 @@ public class TerrainController extends WidgetController {
 			}
 			GameLogicEngine.getInstance().addAction(playerCommand);
 		} else {
-			System.out.println("Key is not bound");
+			log.info("Key is not bound");
 		}
 	}
 

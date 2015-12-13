@@ -1,16 +1,12 @@
 package ru.ayeaye.game.states;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Reader;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Map;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
@@ -22,9 +18,8 @@ import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.gui.TextField;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.display.ImageConstants;
 import ru.ayeaye.game.display.layouts.AbstractLayout;
@@ -41,20 +36,20 @@ import ru.ayeaye.game.gson.ImageDeserializer;
 import ru.ayeaye.game.gson.ImageSerializer;
 import ru.ayeaye.game.input.GameInputListener;
 import ru.ayeaye.game.logic.GameLogicEngine;
-import ru.ayeaye.game.logic.triggers.Trigger;
 import ru.ayeaye.game.model.Attribute;
 import ru.ayeaye.game.model.GameField;
 import ru.ayeaye.game.model.GameLogSource;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
 import ru.ayeaye.game.model.Tag;
-import test.ActionParameter;
-import test.ActionType;
-import test.GenericAction;
-import test.GenericActionPool;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class PlayState extends BasicGameState {
 
+	public static Logger log = LoggerFactory.getLogger(PlayState.class);
+	
 	public static int ID = StateIdGenerator.getNextId();
 	
 	private Widget mainFrame;
@@ -120,7 +115,7 @@ public class PlayState extends BasicGameState {
 		
 		File save = new File("./save.json");
 		if (!save.exists()) {
-			System.out.println("Saving player");
+			log.debug("Saving player");
 			player = new GameObject();
 			player.setImage(ImageConstants.getInstance().demon);
 			player.getTags().add(Tag.CAN_WALK);
@@ -137,7 +132,7 @@ public class PlayState extends BasicGameState {
 				e.printStackTrace();
 			}
 		} else {
-			System.out.println("Loading player");
+			log.debug("Loading player");
 			try {
 				Path path = Paths.get(save.getCanonicalPath());
 				byte[] encoded = Files.readAllBytes(path);
@@ -264,7 +259,7 @@ public class PlayState extends BasicGameState {
 //				int j = goTarget.getLocationCell().getJ();
 //				
 //				if (i + j == 3) {
-//					System.out.println("Win!");
+//					log.debug("Win!");
 //					goTarget.getTags().remove(Tag.CAN_WALK);
 //				}
 //				return null;
@@ -452,7 +447,7 @@ public class PlayState extends BasicGameState {
 			mainFrame.render(g, 0, 0, container.getWidth(), container.getHeight());
 //			tf.render(container, g);
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Failed to render", e);
 			throw e;
 		}
 	}
@@ -483,14 +478,7 @@ public class PlayState extends BasicGameState {
 		int keyCode = GameInputListener.getInstance().getKey();
 		if (keyCode != 0) {
 			int modifier = GameInputListener.getInstance().getModifier();
-//			String modif = "     ";
-//			if (modifier == Input.KEY_LCONTROL)
-//				modif = "CTRL-";
-//			else if (modifier == Input.KEY_LSHIFT)
-//				modif = "SHFT-";
-//			 if (modifier == Input.KEY_LALT)
-//					modif = " ALT-";
-//			System.out.println("Key pressed " + modif + Input.getKeyName(keyCode) + " " + "(" + keyCode + ")");
+//			log.debug("Key pressed " + Input.getKeyName(modifier) + "-" + Input.getKeyName(keyCode) + " " + "(" + keyCode + ")");
 			mainFrame.dispatchKeyEvent(keyCode, modifier);
 			GameInputListener.getInstance().clearKey();
 		}

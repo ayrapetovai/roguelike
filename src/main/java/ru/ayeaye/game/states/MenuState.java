@@ -8,12 +8,16 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.util.MenuAction;
 import ru.ayeaye.game.util.Tuple;
 
 public abstract class MenuState extends BasicGameState {
 
+	protected final Logger log = LoggerFactory.getLogger(this.getClass());
+	
 	private List<Tuple<String, MenuAction>> options = new ArrayList<Tuple<String, MenuAction>>();
 	private int maxOptionTitleLength = -1;
 	
