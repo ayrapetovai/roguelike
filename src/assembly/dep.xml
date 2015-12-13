@@ -28,11 +28,8 @@
 	<dependencySets>
 		<dependencySet>
 			<outputDirectory>/libs</outputDirectory>
-			<includes>
-				<include>*:jar</include>
-			</includes>
 			<excludes>
-				<exclude>${groupId}:${artifactId}</exclude>
+				<exclude>${project.groupId}:${project.artifactId}</exclude>
 			</excludes>
 		</dependencySet>
 	</dependencySets>
