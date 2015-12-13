@@ -23,7 +23,7 @@ public class MeleeAttack implements GenericAction {
 
 	@Override
 	public float getDelay() {
-		return 1; // TODO: тут должна быть скорость атаки
+		return 1; // TODO: С‚СѓС‚ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ СЃРєРѕСЂРѕСЃС‚СЊ Р°С‚Р°РєРё
 	}
 
 	@Override
@@ -53,7 +53,7 @@ public class MeleeAttack implements GenericAction {
 
 	@Override
 	public GenericAction getPostAction() {
-		// FIXME: для теста написано
+		// FIXME: РґР»СЏ С‚РµСЃС‚Р° РЅР°РїРёСЃР°РЅРѕ
 		Integer targetHitPoints = (Integer) target.getAttributes().get(Attribute.HIT_POINTS_INT);
 		if (targetHitPoints <= 0) {
 			target.getLocationCell().removeGameObject(target);

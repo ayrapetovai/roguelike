@@ -9,7 +9,7 @@ public class MainClass {
 	
 	public static void main(String[] args) throws SlickException {
 		
-		//TODO: нужно сделать, чтобы переменная java.library.path выставлялась из кода, примерно так:
+		//TODO: РЅСѓР¶РЅРѕ СЃРґРµР»Р°С‚СЊ, С‡С‚РѕР±С‹ РїРµСЂРµРјРµРЅРЅР°СЏ java.library.path РІС‹СЃС‚Р°РІР»СЏР»Р°СЃСЊ РёР· РєРѕРґР°, РїСЂРёРјРµСЂРЅРѕ С‚Р°Рє:
 //		File f = new File("lib/native");
 //		System.setProperty("java.library.path", f.getAbsolutePath());
 		

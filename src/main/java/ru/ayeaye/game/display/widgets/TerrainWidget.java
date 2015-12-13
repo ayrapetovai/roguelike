@@ -34,7 +34,7 @@ public class TerrainWidget extends Widget {
 		final int absoluteXOffset = absoluteX - gameField.getPlayer().getLocationCell().getJ() * ImageConstants.cellWidthInPixels + getWidth()/2 - ImageConstants.cellWidthInPixels/2;
 		final int absoluteYOffset = absoluteY - gameField.getPlayer().getLocationCell().getI() * ImageConstants.cellHeightInPixels + getHeight()/2 - ImageConstants.cellHeightInPixels/2;
 		
-		// расчитываем граничные индексы отображаемых тайлов
+		// СЂР°СЃС‡РёС‚С‹РІР°РµРј РіСЂР°РЅРёС‡РЅС‹Рµ РёРЅРґРµРєСЃС‹ РѕС‚РѕР±СЂР°Р¶Р°РµРјС‹С… С‚Р°Р№Р»РѕРІ
 		int fromI = 0;
 		if (absoluteYOffset - absoluteY < 0) {
 			fromI = -(absoluteYOffset - absoluteY) / ImageConstants.cellHeightInPixels;
@@ -65,7 +65,7 @@ public class TerrainWidget extends Widget {
 		
 //		int counter = 0;
 		final FieldCell[][] cells = gameField.getCells();
-		// проходим только по тем тайлам, которые попали в область виджета
+		// РїСЂРѕС…РѕРґРёРј С‚РѕР»СЊРєРѕ РїРѕ С‚РµРј С‚Р°Р№Р»Р°Рј, РєРѕС‚РѕСЂС‹Рµ РїРѕРїР°Р»Рё РІ РѕР±Р»Р°СЃС‚СЊ РІРёРґР¶РµС‚Р°
 		for (int yIndexI = fromI; yIndexI < toI; yIndexI++) {
 			for (int xIndexJ = fromJ; xIndexJ < toJ; xIndexJ++) {
 				cells[yIndexI][xIndexJ].render(graphcis, absoluteXOffset + xIndexJ * ImageConstants.cellWidthInPixels, absoluteYOffset + yIndexI * ImageConstants.cellHeightInPixels);
@@ -80,7 +80,7 @@ public class TerrainWidget extends Widget {
 		this.controller = new TerrainController(gameField);
 	}
 	
-	@Override // Никаких разметок для этого виджета, он отображает только игровое поле
+	@Override // РќРёРєР°РєРёС… СЂР°Р·РјРµС‚РѕРє РґР»СЏ СЌС‚РѕРіРѕ РІРёРґР¶РµС‚Р°, РѕРЅ РѕС‚РѕР±СЂР°Р¶Р°РµС‚ С‚РѕР»СЊРєРѕ РёРіСЂРѕРІРѕРµ РїРѕР»Рµ
 	public void setLayout(AbstractLayout layout) {
 		throw new IllegalStateException("No layouts for this widget");
 	}

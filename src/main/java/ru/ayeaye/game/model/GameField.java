@@ -56,7 +56,7 @@ public class GameField {
 			return cells[i][j];
 	}
 	
-	// использовать геттер только в классе для рисования
+	// РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РіРµС‚С‚РµСЂ С‚РѕР»СЊРєРѕ РІ РєР»Р°СЃСЃРµ РґР»СЏ СЂРёСЃРѕРІР°РЅРёСЏ
 	public FieldCell[][] getCells() {
 		return cells;
 	}
@@ -78,7 +78,7 @@ public class GameField {
 	}
 	
 	public FieldCell getSelectedCell() {
-		// FIXME: как насчет синхронизации с setCellSelected?
+		// FIXME: РєР°Рє РЅР°СЃС‡РµС‚ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃ setCellSelected?
 		return selectedCell;
 	}
 	

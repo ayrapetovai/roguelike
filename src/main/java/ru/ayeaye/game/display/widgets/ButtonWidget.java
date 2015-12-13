@@ -40,7 +40,7 @@ public class ButtonWidget extends Widget {
 		graphcis.fillRect((float)absoluteX + borderWidth/2, (float)absoluteY + borderWidth/2, (float)width - borderWidth + 1, (float)height - borderWidth);
 		graphcis.setColor(oldColor);
 		
-		final int letterHeight = graphcis.getFont().getHeight("A"); //TODO: это же константа, нужно вынести куда-нибудь
+		final int letterHeight = graphcis.getFont().getHeight("A"); //TODO: СЌС‚Рѕ Р¶Рµ РєРѕРЅСЃС‚Р°РЅС‚Р°, РЅСѓР¶РЅРѕ РІС‹РЅРµСЃС‚Рё РєСѓРґР°-РЅРёР±СѓРґСЊ
 		final int lineWidth = graphcis.getFont().getWidth(text);
 		final int lineX = absoluteX + width/2 - lineWidth/2;
 		final int lineY = absoluteY + height/2 - letterHeight/2 - letterHeight/7;

@@ -37,8 +37,8 @@ public class GameLogWidget extends Widget {
 		final int textAreaWidth = endX - beginX;
 		final int textAreaHeight = endY - beginY;
 		
-		final int letterHeight = graphcis.getFont().getHeight("A"); //TODO: это же константа, нужно вынести куда-нибудь
-		final int letterWidth = graphcis.getFont().getHeight("A"); //TODO: это же константа, нужно вынести куда-нибудь
+		final int letterHeight = graphcis.getFont().getHeight("A"); //TODO: СЌС‚Рѕ Р¶Рµ РєРѕРЅСЃС‚Р°РЅС‚Р°, РЅСѓР¶РЅРѕ РІС‹РЅРµСЃС‚Рё РєСѓРґР°-РЅРёР±СѓРґСЊ
+		final int letterWidth = graphcis.getFont().getHeight("A"); //TODO: СЌС‚Рѕ Р¶Рµ РєРѕРЅСЃС‚Р°РЅС‚Р°, РЅСѓР¶РЅРѕ РІС‹РЅРµСЃС‚Рё РєСѓРґР°-РЅРёР±СѓРґСЊ
 		final int lastLetterIndex = textAreaWidth / letterWidth;
 		
 		final int numberOfLines = textAreaHeight / (letterHeight + indentBetweenLines);

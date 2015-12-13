@@ -16,7 +16,7 @@ public class PlayMenuState extends MenuState {
 
 	@Override
 	public String getHeader() {
-		return null; // нет заголовка
+		return null; // РЅРµС‚ Р·Р°РіРѕР»РѕРІРєР°
 	}
 	
 	@Override

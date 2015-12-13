@@ -32,10 +32,10 @@ public class TerrainController extends WidgetController {
 		keyMapping.put(Input.KEY_NUMPAD8, new PlayerPushWalkKey());
 		keyMapping.put(Input.KEY_NUMPAD1, new PlayerPushWalkKey());
 		keyMapping.put(Input.KEY_NUMPAD3, new PlayerPushWalkKey());
-		keyMapping.put(Input.KEY_NUMPAD5, new PlayerPushWalkKey()); // пропустить ход
+		keyMapping.put(Input.KEY_NUMPAD5, new PlayerPushWalkKey()); // РїСЂРѕРїСѓСЃС‚РёС‚СЊ С…РѕРґ
 		keyMapping.put(Input.KEY_NUMPAD7, new PlayerPushWalkKey());
 		keyMapping.put(Input.KEY_NUMPAD9, new PlayerPushWalkKey());
-		keyMapping.put(Input.MOUSE_LEFT_BUTTON + 1000, new PlayerMadeMousePushOnFieldCell()); // FIXME: нужен новый маппинг для кнопок мыши
+		keyMapping.put(Input.MOUSE_LEFT_BUTTON + 1000, new PlayerMadeMousePushOnFieldCell()); // FIXME: РЅСѓР¶РµРЅ РЅРѕРІС‹Р№ РјР°РїРїРёРЅРі РґР»СЏ РєРЅРѕРїРѕРє РјС‹С€Рё
 		
 		keyDirectionMapping = new HashMap<>();
 		
@@ -86,7 +86,7 @@ public class TerrainController extends WidgetController {
 		final int indexI = (mouseY - absoluteYOffset)/cellHeightInPixels;
 		final int indexJ = (mouseX - absoluteXOffset)/cellWidthInPixels;
 		
-		// TODO: упростить условие
+		// TODO: СѓРїСЂРѕСЃС‚РёС‚СЊ СѓСЃР»РѕРІРёРµ
 		if (indexI >= 0 && indexI < heightInCells && indexJ >= 0 && indexJ < widthInCells &&
 				mouseY - absoluteYOffset > 0 && mouseX - absoluteXOffset > 0 &&
 				mouseY - absoluteY < minHeight && mouseX - absoluteX < minWidth) {

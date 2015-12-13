@@ -24,13 +24,13 @@ public class MoveCreatureToCell implements GenericAction {
 
 	@Override
 	public float getDelay() {
-		// FIXME: падает если приказать идти на клетку, на которой персонаж уже находится
+		// FIXME: РїР°РґР°РµС‚ РµСЃР»Рё РїСЂРёРєР°Р·Р°С‚СЊ РёРґС‚Рё РЅР° РєР»РµС‚РєСѓ, РЅР° РєРѕС‚РѕСЂРѕР№ РїРµСЂСЃРѕРЅР°Р¶ СѓР¶Рµ РЅР°С…РѕРґРёС‚СЃСЏ
 		return path.get(nextCellNum).getDirectionTo(subject.getLocationCell()).isDiagonal()? 1.2f: 1f;
 	}
 
 	@Override
 	public boolean canApplay(GameModel model) {
-		return subject.getTags().contains(Tag.CAN_WALK) && nextCellNum < path.size() && path.get(nextCellNum).hasObjectWithTag(Tag.STANDABLE) && !path.get(nextCellNum).hasObjectWithTag(Tag.CREATURE); // есть куда идти
+		return subject.getTags().contains(Tag.CAN_WALK) && nextCellNum < path.size() && path.get(nextCellNum).hasObjectWithTag(Tag.STANDABLE) && !path.get(nextCellNum).hasObjectWithTag(Tag.CREATURE); // РµСЃС‚СЊ РєСѓРґР° РёРґС‚Рё
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class MoveCreatureToCell implements GenericAction {
 
 	@Override
 	public GenericAction getPostAction() {
-		// Если дошли до клетки назначения, а в ней кто-то есть - будем его бить!
+		// Р•СЃР»Рё РґРѕС€Р»Рё РґРѕ РєР»РµС‚РєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ, Р° РІ РЅРµР№ РєС‚Рѕ-С‚Рѕ РµСЃС‚СЊ - Р±СѓРґРµРј РµРіРѕ Р±РёС‚СЊ!
 		if (nextCellNum == path.size() - 1) {
 			GameObject target = path.get(nextCellNum).getObjectWithTag(Tag.CREATURE);
 			if (target != null) {

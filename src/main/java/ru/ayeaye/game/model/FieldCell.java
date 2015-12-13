@@ -89,9 +89,9 @@ public class FieldCell {
 	}
 
 	public void render(Graphics graphicContext, int x, int y) {
-		// TODO: нужно мерджить рисунки одного уровня (дыра и пол, не должны быть разными рисунками. должен быть один)
+		// TODO: РЅСѓР¶РЅРѕ РјРµСЂРґР¶РёС‚СЊ СЂРёСЃСѓРЅРєРё РѕРґРЅРѕРіРѕ СѓСЂРѕРІРЅСЏ (РґС‹СЂР° Рё РїРѕР», РЅРµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ СЂР°Р·РЅС‹РјРё СЂРёСЃСѓРЅРєР°РјРё. РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РѕРґРёРЅ)
 		for (GameObject go: gameObjectStack ) {
-			graphicContext.drawImage(go.getImage(), x, y, null); //TODO: последний аргумент - фильтр, пригодится для тумана войны
+			graphicContext.drawImage(go.getImage(), x, y, null); //TODO: РїРѕСЃР»РµРґРЅРёР№ Р°СЂРіСѓРјРµРЅС‚ - С„РёР»СЊС‚СЂ, РїСЂРёРіРѕРґРёС‚СЃСЏ РґР»СЏ С‚СѓРјР°РЅР° РІРѕР№РЅС‹
 		}
 		if (selected) {
 			graphicContext.drawImage(ImageConstants.getInstance().selected, x, y, null);
@@ -130,7 +130,7 @@ public class FieldCell {
 	}
 
 	public Direction getDirectionTo(FieldCell locationCell) {
-		// TODO: переделать
+		// TODO: РїРµСЂРµРґРµР»Р°С‚СЊ
 //		int diffI = i - locationCell.i;
 //		int diffJ = j - locationCell.j;
 //		return Direction.values()[9 - diffI*3 + diffJ];

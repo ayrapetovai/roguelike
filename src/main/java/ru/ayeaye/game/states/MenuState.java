@@ -39,7 +39,7 @@ public abstract class MenuState extends BasicGameState {
 			g.drawString(header, x, y);
 		}
 		
-		// поле maxOptionTitleLength инициализируется один раз, при первом запуске render(...)
+		// РїРѕР»Рµ maxOptionTitleLength РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚СЃСЏ РѕРґРёРЅ СЂР°Р·, РїСЂРё РїРµСЂРІРѕРј Р·Р°РїСѓСЃРєРµ render(...)
 		if (maxOptionTitleLength < 0) {
 			for (Tuple<String, MenuAction> option: options) {
 				int optionTitleLength = g.getFont().getWidth(option.first); 
