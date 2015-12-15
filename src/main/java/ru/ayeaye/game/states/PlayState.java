@@ -466,7 +466,7 @@ public class PlayState extends BasicGameState {
 	public void init(GameContainer container, StateBasedGame game) throws SlickException {
 		mainFrame.setWidth(container.getWidth());
 		mainFrame.setHeight(container.getHeight());
-		tf = new TextField(container, container.getDefaultFont(), 0, 0, 50, 50);
+		tf = new TextField(container, container.getDefaultFont(), 100, 100, 50, 50);
 		tf.setText("Hello!");
 	}
 
