@@ -41,7 +41,7 @@ public class MeleeAttack implements GenericAction {
 				target.getAttributes().put(Attribute.HIT_POINTS_INT, resultTargetHitPoints);
 			}
 		} else {
-			System.out.println(attacker.getDescription() + " can't attack!");
+			System.out.println(attacker.getAttributes().get(Attribute.DESCRIPTION) + " can't attack!");
 		}
 
 	}
@@ -63,7 +63,7 @@ public class MeleeAttack implements GenericAction {
 
 	@Override
 	public String getDesctiption() {
-		return attacker.getDescription() + " attacks " + target.getDescription();
+		return attacker.getAttributes().get(Attribute.DESCRIPTION) + " attacks " + target.getAttributes().get(Attribute.DESCRIPTION);
 	}
 	
 }

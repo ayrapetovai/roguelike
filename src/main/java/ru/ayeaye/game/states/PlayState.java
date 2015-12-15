@@ -7,6 +7,8 @@ import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
@@ -30,6 +32,7 @@ import ru.ayeaye.game.display.layouts.VerticalLayout;
 import ru.ayeaye.game.display.widgets.ButtonWidget;
 import ru.ayeaye.game.display.widgets.ContextWidget;
 import ru.ayeaye.game.display.widgets.GameLogWidget;
+import ru.ayeaye.game.display.widgets.InventoryWidget;
 import ru.ayeaye.game.display.widgets.TerrainWidget;
 import ru.ayeaye.game.display.widgets.Widget;
 import ru.ayeaye.game.gson.ImageDeserializer;
@@ -70,8 +73,8 @@ public class PlayState extends BasicGameState {
 		GameObject someMonster = new GameObject();
 		someMonster.getTags().add(Tag.CREATURE);
 		someMonster.getAttributes().put(Attribute.HIT_POINTS_INT, 10);
+		someMonster.getAttributes().put(Attribute.DESCRIPTION, "minor demon");
 		someMonster.setImage(ImageConstants.getInstance().minorDemon);
-		someMonster.setDescription("minor demon");
 		
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
@@ -122,7 +125,8 @@ public class PlayState extends BasicGameState {
 			player.getTags().add(Tag.CREATURE);
 			player.getTags().add(Tag.CAN_ATTACK);
 			player.getAttributes().put(Attribute.ATTACK_POINTS_INT, 1);
-			player.setDescription("demon");
+			player.getAttributes().put(Attribute.DESCRIPTION, "demon");
+			player.getAttributes().put(Attribute.INVENTORY_GAME_OBJECT_LIST, createInventoryItems());
 			String json = gson.toJson(player);
 			try {
 				Writer w = new FileWriter(save);
@@ -146,6 +150,15 @@ public class PlayState extends BasicGameState {
 		return player;
 	}
 	
+	private List<GameObject> createInventoryItems() {
+		List<GameObject> result = new ArrayList<>();
+		GameObject axe = new GameObject();
+		axe.setImage(ImageConstants.getInstance().exe);
+		axe.getAttributes().put(Attribute.DESCRIPTION, "axe +5Str, -2Int, -2Stmn");
+		result.add(axe);
+		return result;
+	}
+
 	private Widget getLocalContextButtons() {
 		Widget mainFrame = new Widget("Main Frame");
 		mainFrame.setBackgroundColor(Color.blue);
@@ -214,6 +227,15 @@ public class PlayState extends BasicGameState {
 		Widget mainFrame = new Widget("Main Frame");
 		ParentRelativeLayout prl = new ParentRelativeLayout();
 		
+		InventoryWidget inventory = new InventoryWidget("inventory", 600, 400);
+		inventory.setCentred(true);
+		inventory.setVisible(false);
+		inventory.setAlowedToDispatchMouse(false);
+		inventory.setAlowedToDispatchKey(false);
+		inventory.setBackgroundColor(Color.darkGray);
+		inventory.setOwner(gm.getField().getPlayer());
+		topWidget = inventory;
+		
 		TerrainWidget terrain = new TerrainWidget("terrain");
 		terrain.setGameField(gm.getField());
 		terrain.setBackgroundColor(Color.gray);
@@ -233,6 +255,7 @@ public class PlayState extends BasicGameState {
 		Widget logAndTerrain = new Widget("logAndTerrain");
 		logAndTerrain.setLayout(prl);
 		StackLayout stack = new StackLayout();
+		
 		stack.addWidget(logAndTerrain);
 		
 		GameLogWidget bigGameLog = new GameLogWidget("biglog");
@@ -240,11 +263,11 @@ public class PlayState extends BasicGameState {
 		bigGameLog.setVisible(false);
 		bigGameLog.setAlowedToDispatchMouse(false);
 		bigGameLog.setBackgroundColor(Color.lightGray);
-//		bigGameLog.setOffsetX(50);
-//		bigGameLog.setOffsetY(50);
-//		bigGameLog.setCentred(true);
-		topWidget = bigGameLog;
+//		topWidget = bigGameLog;
+		
 		stack.addWidget(bigGameLog);
+		stack.addWidget(inventory);
+		
 		mainFrame.setLayout(stack);
 		
 //		gm.getTriggers().put(ActionType.WALK, new Trigger() {

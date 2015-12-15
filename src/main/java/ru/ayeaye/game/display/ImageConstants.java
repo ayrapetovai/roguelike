@@ -29,6 +29,7 @@ public class ImageConstants {
 	public Image demon;
 	public Image minorDemon;
 	public Image grass;
+	public Image exe;
 	
 	private ImageConstants() {
 		try {
@@ -38,6 +39,7 @@ public class ImageConstants {
 			goblin = new Image("img/goblin.png").getScaledCopy(cellWidthInPixels, cellHeightInPixels);
 			demon = new Image("img/demon.png").getScaledCopy(cellWidthInPixels, cellHeightInPixels);
 			minorDemon = new Image("img/minorDemon.png").getScaledCopy(cellWidthInPixels, cellHeightInPixels);
+			exe = new Image("img/axe.png").getScaledCopy(cellWidthInPixels, cellHeightInPixels);
 		} catch (SlickException e) {
 			e.printStackTrace();
 		}

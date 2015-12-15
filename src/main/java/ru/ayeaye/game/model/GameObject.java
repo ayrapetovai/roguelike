@@ -14,7 +14,6 @@ public class GameObject {
 
 	/** 2d bitmap image - representation of the game object that should be rendered on screen */
 	private Image image;
-	private String description;
 	
 	private final Set<Tag> tags = new TreeSet<>();
 	private final Map<Attribute, Object> attributes = new TreeMap<>();
@@ -43,11 +42,4 @@ public class GameObject {
 		return attributes;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-	
-	public void setDescription(String description) {
-		this.description = description;
-	}
 }

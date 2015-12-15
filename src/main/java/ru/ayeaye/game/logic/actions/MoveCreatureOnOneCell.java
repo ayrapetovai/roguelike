@@ -1,6 +1,7 @@
 package ru.ayeaye.game.logic.actions;
 
 import ru.ayeaye.game.logic.misc.Direction;
+import ru.ayeaye.game.model.Attribute;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
@@ -42,7 +43,7 @@ public class MoveCreatureOnOneCell implements GenericAction {
 	
 	@Override
 	public String getDesctiption() {
-		return subject.getDescription() + " goes to " + direction;
+		return subject.getAttributes().get(Attribute.DESCRIPTION) + " goes to " + direction;
 	}
 
 	@Override

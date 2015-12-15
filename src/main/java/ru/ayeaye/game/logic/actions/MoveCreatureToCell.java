@@ -2,6 +2,7 @@ package ru.ayeaye.game.logic.actions;
 
 import java.util.List;
 
+import ru.ayeaye.game.model.Attribute;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
@@ -43,7 +44,7 @@ public class MoveCreatureToCell implements GenericAction {
 	
 	@Override
 	public String getDesctiption() {
-		return subject.getDescription() + " goes to " + path.get(nextCellNum);
+		return subject.getAttributes().get(Attribute.DESCRIPTION) + " goes to " + path.get(nextCellNum);
 	}
 
 	@Override

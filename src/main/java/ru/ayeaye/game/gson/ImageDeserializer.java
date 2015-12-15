@@ -17,6 +17,8 @@ public class ImageDeserializer implements JsonDeserializer<Image> {
 	public Image deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
 		if (json.getAsString().endsWith("demon.png"))
 			return ImageConstants.getInstance().demon;
+		else if (json.getAsString().endsWith("exe.png"))
+			return ImageConstants.getInstance().exe;
 		else
 			return null;
 	}

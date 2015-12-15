@@ -15,7 +15,7 @@ public class FieldCellSerializer implements JsonSerializer<FieldCell> {
 
 	@Override
 	public JsonElement serialize(FieldCell src, Type typeOfSrc, JsonSerializationContext context) {
-		JsonElement je = new JsonNull();
+		JsonElement je = JsonNull.INSTANCE;
 		if (src != null) {
 			JsonObject jo = new JsonObject();
 			jo.add("fields", new JsonPrimitive(src.getI() + ":" + src.getJ() + ":" + src.isSelected()));

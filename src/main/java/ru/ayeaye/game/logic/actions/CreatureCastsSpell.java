@@ -1,5 +1,6 @@
 package ru.ayeaye.game.logic.actions;
 
+import ru.ayeaye.game.model.Attribute;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
 import ru.ayeaye.game.model.GenericAction;
@@ -30,7 +31,7 @@ public class CreatureCastsSpell implements GenericAction {
 
 	@Override
 	public void applay(GameModel model) {
-		System.out.println(target.getDescription() + " is under cast!");
+		System.out.println(target.getAttributes().get(Attribute.DESCRIPTION) + " is under cast!");
 	}
 
 	@Override
@@ -40,7 +41,7 @@ public class CreatureCastsSpell implements GenericAction {
 
 	@Override
 	public String getDesctiption() {
-		return target.getDescription() + " is under cast!";
+		return target.getAttributes().get(Attribute.DESCRIPTION) + " is under cast!";
 	}
 
 	@Override
