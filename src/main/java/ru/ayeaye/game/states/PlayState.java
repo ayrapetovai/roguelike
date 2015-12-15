@@ -68,7 +68,8 @@ public class PlayState extends BasicGameState {
 		int width = 30;
 		GameField field = new GameField(width, height);
 		SpriteSheet grassSheet = ImageConstants.getInstance().grassSheet;
-		GameObject player = saveOrLoadPlayer();
+//		GameObject player = saveOrLoadPlayer();
+		GameObject player = createPlayer();
 		
 		GameObject someMonster = new GameObject();
 		someMonster.getTags().add(Tag.CREATURE);
@@ -119,14 +120,7 @@ public class PlayState extends BasicGameState {
 		File save = new File("./save.json");
 		if (!save.exists()) {
 			log.debug("Saving player");
-			player = new GameObject();
-			player.setImage(ImageConstants.getInstance().demon);
-			player.getTags().add(Tag.CAN_WALK);
-			player.getTags().add(Tag.CREATURE);
-			player.getTags().add(Tag.CAN_ATTACK);
-			player.getAttributes().put(Attribute.ATTACK_POINTS_INT, 1);
-			player.getAttributes().put(Attribute.DESCRIPTION, "demon");
-			player.getAttributes().put(Attribute.INVENTORY_GAME_OBJECT_LIST, createInventoryItems());
+			player = createPlayer();
 			String json = gson.toJson(player);
 			try {
 				Writer w = new FileWriter(save);
@@ -147,6 +141,18 @@ public class PlayState extends BasicGameState {
 			}
 		}
 		
+		return player;
+	}
+	
+	private GameObject createPlayer() {
+		GameObject player = new GameObject();
+		player.setImage(ImageConstants.getInstance().demon);
+		player.getTags().add(Tag.CAN_WALK);
+		player.getTags().add(Tag.CREATURE);
+		player.getTags().add(Tag.CAN_ATTACK);
+		player.getAttributes().put(Attribute.ATTACK_POINTS_INT, 1);
+		player.getAttributes().put(Attribute.DESCRIPTION, "demon");
+		player.getAttributes().put(Attribute.INVENTORY_GAME_OBJECT_LIST, createInventoryItems());
 		return player;
 	}
 	
