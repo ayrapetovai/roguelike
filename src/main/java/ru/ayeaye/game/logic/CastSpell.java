@@ -4,13 +4,14 @@ import ru.ayeaye.game.logic.misc.Direction;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
+import test2.GenericAction;
 
 public class CastSpell implements PlayerCommand {
 
 	private FieldCell targetFieldCell;
 	
 	@Override
-	public test.GenericAction createAction(GameModel model) {
+	public GenericAction createAction(GameModel model) {
 //		return new CreatureCastsSpell(targetFieldCell.getObjectWithTag(Tag.CREATURE));
 		return null;
 	}

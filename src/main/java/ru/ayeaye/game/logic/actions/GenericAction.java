@@ -1,4 +1,6 @@
-package ru.ayeaye.game.model;
+package ru.ayeaye.game.logic.actions;
+
+import ru.ayeaye.game.model.GameModel;
 
 public interface GenericAction {
 	boolean isContinuous();

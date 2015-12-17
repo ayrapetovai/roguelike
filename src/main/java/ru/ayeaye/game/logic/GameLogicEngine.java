@@ -1,11 +1,17 @@
 package ru.ayeaye.game.logic;
 
 import java.util.List;
+import java.util.Map;
 
-import ru.ayeaye.game.logic.misc.Direction;
+import org.newdawn.slick.util.Log;
+
 import ru.ayeaye.game.logic.states.LogicState;
 import ru.ayeaye.game.logic.triggers.Trigger;
 import ru.ayeaye.game.model.GameModel;
+import test2.ActionParameter;
+import test2.ActionType;
+import test2.Algorithm;
+import test2.GenericAction;
 
 public class GameLogicEngine {
 	private static class GameLogicEngineHolder {
@@ -29,8 +35,8 @@ public class GameLogicEngine {
 	}
 	
 	public void makeOneMove() {
-		List<test.GenericAction> actions = model.getTimeQueue().getCurrentActions();
-		for (test.GenericAction action: actions) {
+		List<GenericAction> actions = model.getTimeQueue().getCurrentActions();
+		for (GenericAction action: actions) {
 			model.getGameLogSource().addEntry("action at " + model.getTimeQueue().getCurrentTime());
 			if (action.canExecute()) {
 				Trigger trigger = model.getTriggers().get(action.getActionType());
@@ -38,18 +44,25 @@ public class GameLogicEngine {
 					trigger.preApplay(action.getContext());
 				}
 				
-				action.execute();
+//				action.execute();
+				ActionType actionType = action.getActionType();
+				Map<ActionParameter, Object> context = action.getContext();
+				Algorithm algo = new Algorithm(context, actionType);
+				
+				float d = algo.getDelay();
+				Log.debug("Action delay is " + d);
+				
+				algo.execute();
 				
 				if (trigger != null) {
-					test.GenericAction triggerAction = trigger.postApplay(action.getContext());
+					GenericAction triggerAction = trigger.postApplay(action.getContext());
 					if (triggerAction != null && triggerAction.canPutInTimeQueue()) {
 						model.getTimeQueue().addAction(triggerAction);
 					}
 				}
 				
-				test.GenericAction postAction = action.getPostAction();
-				if (postAction != null && postAction.canPutInTimeQueue()) {
-					model.getTimeQueue().addAction(postAction);
+				if (algo.isContinuos()) {
+					model.getTimeQueue().addAction(action);
 				}
 			}
 			
@@ -65,7 +78,7 @@ public class GameLogicEngine {
 	}
 
 	public void addAction(PlayerCommand playerCommand) {
-		test.GenericAction action = playerCommand.createAction(model);
+		GenericAction action = playerCommand.createAction(model);
 		if (action != null && action.canPutInTimeQueue()) {
 			model.getTimeQueue().addAction(action);
 		}

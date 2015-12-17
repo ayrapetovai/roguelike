@@ -41,5 +41,10 @@ public class GameObject {
 	public Map<Attribute, Object> getAttributes() {
 		return attributes;
 	}
+	
+	@Override
+	public String toString() {
+		return attributes.get(Attribute.DESCRIPTION).toString();
+	}
 
 }

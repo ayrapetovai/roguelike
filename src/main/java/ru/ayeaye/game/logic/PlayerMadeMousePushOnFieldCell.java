@@ -8,9 +8,9 @@ import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
 import ru.ayeaye.game.model.Tag;
-import test.ActionParameter;
-import test.ActionType;
-import test.GenericActionPool;
+import test2.ActionParameter;
+import test2.ActionType;
+import test2.GenericAction;
 
 public class PlayerMadeMousePushOnFieldCell implements PlayerCommand {
 
@@ -21,22 +21,22 @@ public class PlayerMadeMousePushOnFieldCell implements PlayerCommand {
 	}
 	
 	@Override
-	public test.GenericAction createAction(GameModel model) {
+	public GenericAction createAction(GameModel model) {
 		boolean cellsAreNear = targetFiledCell.isNeighborOf(model.getField().getPlayer().getLocationCell());
 		boolean thereIsCreatureInCell = targetFiledCell.hasObjectWithTag(Tag.CREATURE); 
-		if (thereIsCreatureInCell && cellsAreNear) {
-//			return new MeleeAttack(model.getField().getPlayer(), targetFiledCell.getObjectWithTag(Tag.CREATURE));
-			return null;
-		} else {
-			test.GenericAction action = GenericActionPool.getAction(ActionType.WALK_THROW_PATH);
-			Map<ActionParameter, Object> context = new TreeMap<>();
-			context.put(ActionParameter.SOURCE_GAME_OBJECT, model.getField().getPlayer());
-			context.put(ActionParameter.TARGET_FIELD_CELL, targetFiledCell);
-			action.setContext(context);
-			action.init();
-			return action;
+		Map<ActionParameter, Object> context = new TreeMap<>();
+		GenericAction action;
+		if (cellsAreNear && thereIsCreatureInCell) {
+			action = new GenericAction(ActionType.ATTACK);
+			context.put(ActionParameter.TARGET_GAME_OBJECT, targetFiledCell.getObjectWithTag(Tag.CREATURE));
+		} else
+			action = new GenericAction(ActionType.MOVE_THROW_PATH);
+		context.put(ActionParameter.SOURCE_GAME_OBJECT, model.getField().getPlayer());
+		context.put(ActionParameter.TARGET_FIELD_CELL, targetFiledCell);
+		action.setContext(context);
+		return action;
 //			return new MoveCreatureToCell(model.getField().getPlayer(), targetFiledCell);
-		}
+//		}
 	}
 
 	@Override

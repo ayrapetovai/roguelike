@@ -4,6 +4,7 @@ import ru.ayeaye.game.logic.misc.Direction;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
+import test2.GenericAction;
 
 public interface PlayerCommand {
 	
@@ -12,5 +13,5 @@ public interface PlayerCommand {
 	void setTargetFieldCell(FieldCell fieldCell);
 	
 	TargetSource getTargetSource();
-	test.GenericAction createAction(GameModel model);
+	GenericAction createAction(GameModel model);
 }

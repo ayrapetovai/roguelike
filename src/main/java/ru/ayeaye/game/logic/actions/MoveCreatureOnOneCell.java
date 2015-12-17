@@ -5,7 +5,6 @@ import ru.ayeaye.game.model.Attribute;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
-import ru.ayeaye.game.model.GenericAction;
 import ru.ayeaye.game.model.Tag;
 
 public class MoveCreatureOnOneCell implements GenericAction {

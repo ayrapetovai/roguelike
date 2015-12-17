@@ -6,12 +6,14 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
+import test2.GenericAction;
+
 public class TimeQueue {
 
 	private class ActionHolder {
-		test.GenericAction action;
+		GenericAction action;
 		float endTime;
-		public void init(test.GenericAction action) {
+		public void init(GenericAction action) {
 			this.action = action;
 			endTime = action.getDelay() + currentTime;
 		}
@@ -26,7 +28,7 @@ public class TimeQueue {
 		private final LinkedList<ActionHolder> busy = new LinkedList<ActionHolder>();
 		private final LinkedList<ActionHolder> free = new LinkedList<ActionHolder>();
 		
-		public ActionHolder get(test.GenericAction action) {
+		public ActionHolder get(GenericAction action) {
 			ActionHolder ah = null;
 			if (free.isEmpty()) {
 				ah = new ActionHolder();
@@ -63,18 +65,18 @@ public class TimeQueue {
 	
 	private final LinkedList<ActionHolder> actionQueue = new LinkedList<ActionHolder>();
 	
-	private final List<test.GenericAction> actions = new ArrayList<test.GenericAction>();
+	private final List<GenericAction> actions = new ArrayList<GenericAction>();
 	
 	private float currentTime = 0f;
 	
-	public void addAction(test.GenericAction action) {
+	public void addAction(GenericAction action) {
 		if (action != null) {
 			actionQueue.addLast(actionHolderPool.get(action));
 			actionQueue.sort(cmp);
 		}
 	}
 	
-	public List<test.GenericAction> getCurrentActions() {
+	public List<GenericAction> getCurrentActions() {
 		actions.clear();
 		ActionHolder ah = actionQueue.pollFirst();
 		

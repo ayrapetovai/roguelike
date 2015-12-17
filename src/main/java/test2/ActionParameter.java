@@ -1,4 +1,4 @@
-package test;
+package test2;
 
 public enum ActionParameter {
 	

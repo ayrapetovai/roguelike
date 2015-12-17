@@ -3,43 +3,40 @@ package ru.ayeaye.game.logic;
 import java.util.Map;
 import java.util.TreeMap;
 
-import ru.ayeaye.game.logic.actions.MeleeAttack;
-import ru.ayeaye.game.logic.actions.MoveCreatureOnOneCell;
 import ru.ayeaye.game.logic.misc.Direction;
-import ru.ayeaye.game.model.GenericAction;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
 import ru.ayeaye.game.model.Tag;
-import test.ActionParameter;
-import test.ActionType;
-import test.GenericActionPool;
+import test2.ActionParameter;
+import test2.ActionType;
+import test2.GenericAction;
 
 public class PlayerPushWalkKey implements PlayerCommand {
 
 	private Direction direction;
 	
 	@Override
-	public test.GenericAction createAction(GameModel model) {
+	public GenericAction createAction(GameModel model) {
 		
 		FieldCell targetFiledCell = model.getField().getPlayer().getLocationCell().getNeighbourCell(direction);
 		if (targetFiledCell == null) {
 			return null;
 		}
-		
-		boolean thereIsCreatureInCell = targetFiledCell.hasObjectWithTag(Tag.CREATURE); 
-		if (thereIsCreatureInCell) {
-//			return new MeleeAttack(model.getField().getPlayer(), targetFiledCell.getObjectWithTag(Tag.CREATURE));
-			return null;
+		Map<ActionParameter, Object> context = new TreeMap<>();
+		ActionType at;
+		if (targetFiledCell.hasObjectWithTag(Tag.CREATURE)) {
+			at = ActionType.ATTACK;
+			context.put(ActionParameter.TARGET_GAME_OBJECT, targetFiledCell.getObjectWithTag(Tag.CREATURE));
 		} else {
-			test.GenericAction action = GenericActionPool.getAction(ActionType.WALK);
-			Map<ActionParameter, Object> context = new TreeMap<>();
-			context.put(ActionParameter.SOURCE_GAME_OBJECT, model.getField().getPlayer());
-			context.put(ActionParameter.TARGET_FIELD_CELL, model.getField().getPlayer().getLocationCell().getNeighbourCell(direction));
-			action.setContext(context);
-			return action;
-//			return new MoveCreatureOnOneCell(model.getField().getPlayer(), direction);
+			at = ActionType.MOVE_TO_CELL;
 		}
+		test2.GenericAction action = new GenericAction(at);
+		context.put(ActionParameter.SOURCE_GAME_OBJECT, model.getField().getPlayer());
+		context.put(ActionParameter.TARGET_FIELD_CELL, model.getField().getPlayer().getLocationCell().getNeighbourCell(direction));
+		action.setContext(context);
+		return action;
+//			return new MoveCreatureOnOneCell(model.getField().getPlayer(), direction);
 	}
 
 	@Override
