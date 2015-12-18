@@ -5,13 +5,13 @@ import java.util.Map;
 
 import org.newdawn.slick.util.Log;
 
+import ru.ayeaye.game.logic.actions.ActionParameter;
+import ru.ayeaye.game.logic.actions.ActionType;
+import ru.ayeaye.game.logic.actions.Algorithm;
+import ru.ayeaye.game.logic.actions.GenericAction;
 import ru.ayeaye.game.logic.states.LogicState;
 import ru.ayeaye.game.logic.triggers.Trigger;
 import ru.ayeaye.game.model.GameModel;
-import test2.ActionParameter;
-import test2.ActionType;
-import test2.Algorithm;
-import test2.GenericAction;
 
 public class GameLogicEngine {
 	private static class GameLogicEngineHolder {

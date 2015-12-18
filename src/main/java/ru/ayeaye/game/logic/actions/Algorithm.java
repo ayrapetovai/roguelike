@@ -1,4 +1,4 @@
-package test2;
+package ru.ayeaye.game.logic.actions;
 
 import java.util.List;
 import java.util.Map;

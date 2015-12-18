@@ -3,14 +3,14 @@ package ru.ayeaye.game.logic;
 import java.util.Map;
 import java.util.TreeMap;
 
+import ru.ayeaye.game.logic.actions.ActionParameter;
+import ru.ayeaye.game.logic.actions.ActionType;
+import ru.ayeaye.game.logic.actions.GenericAction;
 import ru.ayeaye.game.logic.misc.Direction;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
 import ru.ayeaye.game.model.Tag;
-import test2.ActionParameter;
-import test2.ActionType;
-import test2.GenericAction;
 
 public class PlayerMadeMousePushOnFieldCell implements PlayerCommand {
 

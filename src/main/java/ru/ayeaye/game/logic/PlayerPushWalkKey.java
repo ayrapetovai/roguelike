@@ -3,14 +3,14 @@ package ru.ayeaye.game.logic;
 import java.util.Map;
 import java.util.TreeMap;
 
+import ru.ayeaye.game.logic.actions.ActionParameter;
+import ru.ayeaye.game.logic.actions.ActionType;
+import ru.ayeaye.game.logic.actions.GenericAction;
 import ru.ayeaye.game.logic.misc.Direction;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
 import ru.ayeaye.game.model.GameObject;
 import ru.ayeaye.game.model.Tag;
-import test2.ActionParameter;
-import test2.ActionType;
-import test2.GenericAction;
 
 public class PlayerPushWalkKey implements PlayerCommand {
 
@@ -31,7 +31,7 @@ public class PlayerPushWalkKey implements PlayerCommand {
 		} else {
 			at = ActionType.MOVE_TO_CELL;
 		}
-		test2.GenericAction action = new GenericAction(at);
+		ru.ayeaye.game.logic.actions.GenericAction action = new GenericAction(at);
 		context.put(ActionParameter.SOURCE_GAME_OBJECT, model.getField().getPlayer());
 		context.put(ActionParameter.TARGET_FIELD_CELL, model.getField().getPlayer().getLocationCell().getNeighbourCell(direction));
 		action.setContext(context);

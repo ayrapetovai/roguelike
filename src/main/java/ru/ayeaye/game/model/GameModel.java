@@ -3,8 +3,8 @@ package ru.ayeaye.game.model;
 import java.util.HashMap;
 import java.util.Map;
 
+import ru.ayeaye.game.logic.actions.ActionType;
 import ru.ayeaye.game.logic.triggers.Trigger;
-import test2.ActionType;
 
 public class GameModel {
 	private Map<ActionType, Trigger> triggers = new HashMap<>();

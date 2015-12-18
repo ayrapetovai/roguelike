@@ -1,4 +1,4 @@
-package test2;
+package ru.ayeaye.game.logic.actions;
 
 public enum ActionParameter {
 	

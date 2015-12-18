@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
-import test2.GenericAction;
+import ru.ayeaye.game.logic.actions.GenericAction;
 
 public class TimeQueue {
 

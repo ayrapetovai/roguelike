@@ -1,13 +1,44 @@
 package ru.ayeaye.game.logic.actions;
 
-import ru.ayeaye.game.model.GameModel;
+import java.util.Map;
 
-public interface GenericAction {
-	boolean isContinuous();
-	float getDelay();
-	boolean canApplay(GameModel model);
-	void applay(GameModel model);
-	boolean canPutIntoTimeQueue(GameModel model);
-	GenericAction getPostAction();
-	public String getDesctiption();
+public class GenericAction {
+	private final ActionType actionType;
+	
+	private Map<ActionParameter, Object> context;
+	private Algorithm algo;
+	
+	public GenericAction(ActionType actionType) {
+		this.actionType = actionType;
+	}
+	
+	public boolean canPutInTimeQueue() {
+		return true;
+	}
+	
+	public boolean canExecute() {
+		return true;
+	}
+	
+	public void execute() {
+		algo.execute();
+	}
+	
+	public float getDelay() {
+		return algo.getDelay();
+	}
+	
+	public ActionType getActionType() {
+		return actionType;
+	}
+	
+	public Map<ActionParameter, Object> getContext() {
+		return context;
+	}
+	
+	public void setContext(Map<ActionParameter, Object> context) {
+		this.context = context;
+		this.algo = new Algorithm(context, actionType);
+	}
+
 }
