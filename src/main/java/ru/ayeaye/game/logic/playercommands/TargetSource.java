@@ -1,4 +1,4 @@
-package ru.ayeaye.game.logic;
+package ru.ayeaye.game.logic.playercommands;
 
 public enum TargetSource {
 	DIRECTION,

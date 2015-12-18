@@ -1,4 +1,4 @@
-package ru.ayeaye.game.logic;
+package ru.ayeaye.game.logic.playercommands;
 
 import ru.ayeaye.game.logic.actions.GenericAction;
 import ru.ayeaye.game.logic.misc.Direction;

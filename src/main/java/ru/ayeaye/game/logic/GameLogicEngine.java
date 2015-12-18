@@ -3,17 +3,22 @@ package ru.ayeaye.game.logic;
 import java.util.List;
 import java.util.Map;
 
-import org.newdawn.slick.util.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.logic.actions.ActionParameter;
 import ru.ayeaye.game.logic.actions.ActionType;
 import ru.ayeaye.game.logic.actions.Algorithm;
 import ru.ayeaye.game.logic.actions.GenericAction;
+import ru.ayeaye.game.logic.playercommands.PlayerCommand;
 import ru.ayeaye.game.logic.states.LogicState;
 import ru.ayeaye.game.logic.triggers.Trigger;
 import ru.ayeaye.game.model.GameModel;
 
 public class GameLogicEngine {
+	
+	private static Logger log = LoggerFactory.getLogger(GameLogicEngine.class);
+	
 	private static class GameLogicEngineHolder {
 		public static GameLogicEngine instance = new GameLogicEngine();
 	}
@@ -44,13 +49,11 @@ public class GameLogicEngine {
 					trigger.preApplay(action.getContext());
 				}
 				
-//				action.execute();
 				ActionType actionType = action.getActionType();
 				Map<ActionParameter, Object> context = action.getContext();
 				Algorithm algo = new Algorithm(context, actionType);
 				
-				float d = algo.getDelay();
-				Log.debug("Action delay is " + d);
+				log.debug("Action delay is " + algo.getDelay());
 				
 				algo.execute();
 				

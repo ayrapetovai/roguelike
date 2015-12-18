@@ -1,4 +1,4 @@
-package ru.ayeaye.game.logic;
+package ru.ayeaye.game.logic.playercommands;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -35,8 +35,6 @@ public class PlayerMadeMousePushOnFieldCell implements PlayerCommand {
 		context.put(ActionParameter.TARGET_FIELD_CELL, targetFiledCell);
 		action.setContext(context);
 		return action;
-//			return new MoveCreatureToCell(model.getField().getPlayer(), targetFiledCell);
-//		}
 	}
 
 	@Override

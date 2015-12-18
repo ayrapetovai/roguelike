@@ -1,4 +1,4 @@
-package ru.ayeaye.game.logic;
+package ru.ayeaye.game.logic.playercommands;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -25,7 +25,8 @@ public class PlayerPushWalkKey implements PlayerCommand {
 		}
 		Map<ActionParameter, Object> context = new TreeMap<>();
 		ActionType at;
-		if (targetFiledCell.hasObjectWithTag(Tag.CREATURE)) {
+		GameObject creature = targetFiledCell.getObjectWithTag(Tag.CREATURE);
+		if (creature != null && creature != model.getField().getPlayer()) {
 			at = ActionType.ATTACK;
 			context.put(ActionParameter.TARGET_GAME_OBJECT, targetFiledCell.getObjectWithTag(Tag.CREATURE));
 		} else {
@@ -36,7 +37,6 @@ public class PlayerPushWalkKey implements PlayerCommand {
 		context.put(ActionParameter.TARGET_FIELD_CELL, model.getField().getPlayer().getLocationCell().getNeighbourCell(direction));
 		action.setContext(context);
 		return action;
-//			return new MoveCreatureOnOneCell(model.getField().getPlayer(), direction);
 	}
 
 	@Override

@@ -9,12 +9,11 @@ import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.display.ImageConstants;
 import ru.ayeaye.game.display.widgets.Widget;
-import ru.ayeaye.game.logic.PlayerCommand;
-import ru.ayeaye.game.logic.CastSpell;
 import ru.ayeaye.game.logic.GameLogicEngine;
-import ru.ayeaye.game.logic.PlayerPushWalkKey;
-import ru.ayeaye.game.logic.PlayerMadeMousePushOnFieldCell;
 import ru.ayeaye.game.logic.misc.Direction;
+import ru.ayeaye.game.logic.playercommands.PlayerCommand;
+import ru.ayeaye.game.logic.playercommands.PlayerMadeMousePushOnFieldCell;
+import ru.ayeaye.game.logic.playercommands.PlayerPushWalkKey;
 import ru.ayeaye.game.model.GameField;
 
 public class TerrainController extends WidgetController {
@@ -68,7 +67,7 @@ public class TerrainController extends WidgetController {
 			}
 			GameLogicEngine.getInstance().addAction(playerCommand);
 		} else {
-			log.info("Key is not bound");
+			log.debug("Key is not bound");
 		}
 	}
 
