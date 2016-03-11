@@ -3,6 +3,7 @@ package ru.ayeaye.game.logic.actions;
 import java.util.List;
 import java.util.Map;
 
+import ru.ayeaye.game.display.ImageConstants;
 import ru.ayeaye.game.model.Attribute;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameObject;
@@ -148,7 +149,9 @@ public class Algorithm {
 		}
 	}
 	private boolean markDestroyed(GameObject targetGO) {
-		targetGO.getLocationCell().removeGameObject(targetGO);
+//		targetGO.getLocationCell().removeGameObject(targetGO);
+		targetGO.setImage(ImageConstants.getInstance().corpse);
+		targetGO.getTags().remove(Tag.CREATURE);
 		return targetGO.getTags().add(Tag.DESTROYED);
 	}
 	private boolean attack(GameObject sourceGO, GameObject targetGO) {
