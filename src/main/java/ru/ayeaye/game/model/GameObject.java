@@ -44,7 +44,7 @@ public class GameObject {
 	
 	@Override
 	public String toString() {
-		return attributes.get(Attribute.DESCRIPTION).toString();
+		return attributes.get(Attribute.DESCRIPTION_STRING).toString();
 	}
 
 }

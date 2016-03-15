@@ -3,11 +3,16 @@ package ru.ayeaye.game.display.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.Input;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.display.ImageConstants;
+import ru.ayeaye.game.display.layouts.AbstractLayout;
+import ru.ayeaye.game.display.layouts.VerticalLayout;
+import ru.ayeaye.game.display.widgets.ButtonWidget;
+import ru.ayeaye.game.display.widgets.ContextWidget;
 import ru.ayeaye.game.display.widgets.Widget;
 import ru.ayeaye.game.logic.GameLogicEngine;
 import ru.ayeaye.game.logic.misc.Direction;
@@ -98,6 +103,41 @@ public class TerrainController extends WidgetController {
 				case NONE: break;
 				}
 				GameLogicEngine.getInstance().addAction(playerCommand);
+			}
+			if (mouseButton == Input.MOUSE_RIGHT_BUTTON) {
+				if (caller.getContextWidget() == null) {
+					ContextWidget cw = new ContextWidget("field context", 70, 80);
+					ButtonWidget bw1 = new ButtonWidget("buttonOK", 1f, 1f/3);
+					bw1.setText("OK");
+					bw1.setMouseOverColor(Color.red);
+					bw1.setMouseOffColor(Color.gray);
+					ButtonWidget bw2 = new ButtonWidget("buttonCancel", 1f, 1f/3);
+					bw2.setText("Cancel");
+					bw2.setMouseOverColor(Color.red);
+					bw2.setMouseOffColor(Color.gray);
+					ButtonWidget bw3 = new ButtonWidget("buttonHelp", 1f, 1f/3);
+					bw3.setText("Help");
+					bw3.setMouseOverColor(Color.red);
+					bw3.setMouseOffColor(Color.gray);
+					AbstractLayout labelLayout = new VerticalLayout();
+					labelLayout.addWidget(bw1);
+					labelLayout.addWidget(bw2);
+					labelLayout.addWidget(bw3);
+					
+					cw.setLayout(labelLayout);
+					
+					cw.setVisible(true);
+					cw.setFolowMouse(false);
+					cw.setOffsetX(mouseX - 10);
+					cw.setOffsetY(mouseY - 10);
+					caller.setContextWidget(cw);
+				} else {
+					ContextWidget cw = caller.getContextWidget();
+					cw.setVisible(true);
+					cw.setFolowMouse(false);
+					cw.setOffsetX(mouseX - 10);
+					cw.setOffsetY(mouseY - 10);
+				}
 			}
 		} else {
 			gameField.diselectCell();

@@ -40,5 +40,8 @@ public class GenericAction {
 		this.context = context;
 		this.algo = new Algorithm(context, actionType);
 	}
-
+	
+	public Algorithm getAlgo() {
+		return algo;
+	}
 }

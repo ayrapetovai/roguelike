@@ -74,8 +74,8 @@ public class PlayState extends BasicGameState {
 		GameObject someMonster = new GameObject();
 		someMonster.getTags().add(Tag.CREATURE);
 		someMonster.getTags().add(Tag.DESTRACTABLE);
-		someMonster.getAttributes().put(Attribute.HIT_POINTS_INT, 10);
-		someMonster.getAttributes().put(Attribute.DESCRIPTION, "minor demon");
+		someMonster.getAttributes().put(Attribute.HIT_POINTS_INT, 3);
+		someMonster.getAttributes().put(Attribute.DESCRIPTION_STRING, "minor demon");
 		someMonster.setImage(ImageConstants.getInstance().minorDemon);
 		
 		for (int i = 0; i < height; i++) {
@@ -152,11 +152,11 @@ public class PlayState extends BasicGameState {
 		player.getTags().add(Tag.CREATURE);
 		player.getTags().add(Tag.CAN_ATTACK);
 		player.getTags().add(Tag.DESTRACTABLE);
-		player.getAttributes().put(Attribute.HIT_POINTS_INT, 15);
+		player.getAttributes().put(Attribute.HIT_POINTS_INT, 5);
 		player.getAttributes().put(Attribute.ATTACK_POINTS_INT, 1);
 		player.getAttributes().put(Attribute.ATTACK_SPEED_FLOAT, 1.5f);
 		player.getAttributes().put(Attribute.MOVE_SPEED_FLOAT, 1f); 
-		player.getAttributes().put(Attribute.DESCRIPTION, "demon");
+		player.getAttributes().put(Attribute.DESCRIPTION_STRING, "demon");
 		player.getAttributes().put(Attribute.INVENTORY_GAME_OBJECT_LIST, createInventoryItems());
 		return player;
 	}
@@ -165,7 +165,7 @@ public class PlayState extends BasicGameState {
 		List<GameObject> result = new ArrayList<>();
 		GameObject axe = new GameObject();
 		axe.setImage(ImageConstants.getInstance().exe);
-		axe.getAttributes().put(Attribute.DESCRIPTION, "axe +5Str, -2Int, -2Stmn");
+		axe.getAttributes().put(Attribute.DESCRIPTION_STRING, "axe +5Str, -2Int, -2Stmn");
 		result.add(axe);
 		return result;
 	}

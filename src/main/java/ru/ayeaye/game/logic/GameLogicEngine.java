@@ -49,10 +49,7 @@ public class GameLogicEngine {
 					trigger.preApplay(action.getContext());
 				}
 				
-				ActionType actionType = action.getActionType();
-				Map<ActionParameter, Object> context = action.getContext();
-				Algorithm algo = new Algorithm(context, actionType);
-				
+				Algorithm algo = action.getAlgo();
 				log.debug("Action delay is " + algo.getDelay());
 				
 				algo.execute();

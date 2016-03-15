@@ -26,10 +26,12 @@ public class MainClass {
 		int height = 768;
 		
 		AppGameContainer container = new AppGameContainer(new Application(), width, height, fullscrean);
-		ImageConstants.cellHeightInPixels = width / 40;
-		ImageConstants.cellWidthInPixels = width / 40;
-		container.setTargetFrameRate(200);
-		container.setMaximumLogicUpdateInterval(200);
+//		ImageConstants.cellHeightInPixels = width / 40;
+//		ImageConstants.cellWidthInPixels = width / 40;
+		ImageConstants.cellHeightInPixels = height / 15;
+		ImageConstants.cellWidthInPixels = width / 25;
+		container.setTargetFrameRate(25);
+		container.setMaximumLogicUpdateInterval(1);
 		container.setShowFPS(true);
 		container.start();
 		
