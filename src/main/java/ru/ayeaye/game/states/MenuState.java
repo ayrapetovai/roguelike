@@ -29,7 +29,7 @@ public abstract class MenuState extends BasicGameState {
 	}
 	
 	@Override
-	public final void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
+	public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
 		
 		int y = 150;
 		String header = getHeader();

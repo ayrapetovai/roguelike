@@ -6,6 +6,7 @@ import org.newdawn.slick.state.StateBasedGame;
 
 import ru.ayeaye.game.input.GameInputListener;
 import ru.ayeaye.game.states.ChangeSettingsState;
+import ru.ayeaye.game.states.InitState;
 import ru.ayeaye.game.states.PlayMenuState;
 import ru.ayeaye.game.states.PlayState;
 import ru.ayeaye.game.states.LoadGameState;
@@ -23,6 +24,7 @@ public class Application extends StateBasedGame {
 	public void initStatesList(GameContainer gc) throws SlickException {
 		gc.getInput().addListener(GameInputListener.getInstance());
 		
+		addState(new InitState());
 		addState(new MainMenuState());
 		addState(new PlayState());
 		addState(new ChangeSettingsState());

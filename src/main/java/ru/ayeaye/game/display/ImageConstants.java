@@ -23,6 +23,9 @@ public class ImageConstants {
 	public static int cellWidthInPixels = 64;
 	public static int cellHeightInPixels = 64;
 	
+	public static int fontHeightInPixels = -1; // InitState
+	public static int fontWidthInPixels = -1; // InitState
+	
 	public Image selected;
 	public SpriteSheet grassSheet;
 	public Image goblin;

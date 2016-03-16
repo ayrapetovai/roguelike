@@ -1,6 +1,8 @@
 package ru.ayeaye.game.display.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.newdawn.slick.Color;
@@ -105,38 +107,51 @@ public class TerrainController extends WidgetController {
 				GameLogicEngine.getInstance().addAction(playerCommand);
 			}
 			if (mouseButton == Input.MOUSE_RIGHT_BUTTON) {
-				if (caller.getContextWidget() == null) {
-					ContextWidget cw = new ContextWidget("field context", 70, 80);
-					ButtonWidget bw1 = new ButtonWidget("buttonOK", 1f, 1f/3);
-					bw1.setText("OK");
-					bw1.setMouseOverColor(Color.red);
-					bw1.setMouseOffColor(Color.gray);
-					ButtonWidget bw2 = new ButtonWidget("buttonCancel", 1f, 1f/3);
-					bw2.setText("Cancel");
-					bw2.setMouseOverColor(Color.red);
-					bw2.setMouseOffColor(Color.gray);
-					ButtonWidget bw3 = new ButtonWidget("buttonHelp", 1f, 1f/3);
-					bw3.setText("Help");
-					bw3.setMouseOverColor(Color.red);
-					bw3.setMouseOffColor(Color.gray);
+				ContextWidget fieldContextMenue = caller.getContextWidget();
+				if (fieldContextMenue == null) {
+					
+					List<Widget> contextButtons = new ArrayList<Widget>();
+					
+					ButtonWidget button = new ButtonWidget("info", 1f, 1f);
+					button.setText("info");
+					button.setMouseOverColor(Color.red);
+					button.setMouseOffColor(Color.gray);
+					contextButtons.add(button);
+					button = new ButtonWidget("walk", 1f, 1f);
+					button.setText("walk");
+					button.setMouseOverColor(Color.red);
+					button.setMouseOffColor(Color.gray);
+					contextButtons.add(button);
+					button = new ButtonWidget("spell", 1f, 1f);
+					button.setText("spell");
+					button.setMouseOverColor(Color.red);
+					button.setMouseOffColor(Color.gray);
+					contextButtons.add(button);
+					button = new ButtonWidget("attack", 1f, 1f);
+					button.setText("attack");
+					button.setMouseOverColor(Color.red);
+					button.setMouseOffColor(Color.gray);
+					contextButtons.add(button);
+					
+					fieldContextMenue = new ContextWidget("field context", 70, 26 * contextButtons.size());
 					AbstractLayout labelLayout = new VerticalLayout();
-					labelLayout.addWidget(bw1);
-					labelLayout.addWidget(bw2);
-					labelLayout.addWidget(bw3);
+					for (Widget w: contextButtons) {
+						w.setHeightProportion(1f/contextButtons.size());
+						labelLayout.addWidget(w);
+					}
 					
-					cw.setLayout(labelLayout);
+					fieldContextMenue.setLayout(labelLayout);
 					
-					cw.setVisible(true);
-					cw.setFolowMouse(false);
-					cw.setOffsetX(mouseX - 10);
-					cw.setOffsetY(mouseY - 10);
-					caller.setContextWidget(cw);
+					fieldContextMenue.setVisible(true);
+					fieldContextMenue.setFolowMouse(false);
+					fieldContextMenue.setOffsetX(mouseX - 10);
+					fieldContextMenue.setOffsetY(mouseY - 10);
+					caller.setContextWidget(fieldContextMenue);
 				} else {
-					ContextWidget cw = caller.getContextWidget();
-					cw.setVisible(true);
-					cw.setFolowMouse(false);
-					cw.setOffsetX(mouseX - 10);
-					cw.setOffsetY(mouseY - 10);
+					fieldContextMenue.setVisible(true);
+					fieldContextMenue.setFolowMouse(false);
+					fieldContextMenue.setOffsetX(mouseX - 10);
+					fieldContextMenue.setOffsetY(mouseY - 10);
 				}
 			}
 		} else {

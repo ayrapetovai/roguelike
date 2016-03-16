@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.newdawn.slick.Graphics;
 
+import ru.ayeaye.game.display.ImageConstants;
 import ru.ayeaye.game.model.GameLogSource;
 
 public class GameLogWidget extends Widget {
@@ -37,8 +38,8 @@ public class GameLogWidget extends Widget {
 		final int textAreaWidth = endX - beginX;
 		final int textAreaHeight = endY - beginY;
 		
-		final int letterHeight = graphcis.getFont().getHeight("A"); //TODO: это же константа, нужно вынести куда-нибудь
-		final int letterWidth = graphcis.getFont().getHeight("A"); //TODO: это же константа, нужно вынести куда-нибудь
+		final int letterHeight = ImageConstants.fontHeightInPixels;
+		final int letterWidth = ImageConstants.fontWidthInPixels;
 		final int lastLetterIndex = textAreaWidth / letterWidth;
 		
 		final int numberOfLines = textAreaHeight / (letterHeight + indentBetweenLines);

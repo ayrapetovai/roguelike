@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.newdawn.slick.Graphics;
 
+import ru.ayeaye.game.display.ImageConstants;
 import ru.ayeaye.game.model.Attribute;
 import ru.ayeaye.game.model.GameObject;
 
@@ -25,8 +26,8 @@ public class InventoryWidget extends Widget {
 	@Override
 	public void customRender(Graphics graphcis, final int absoluteX, final int absoluteY, final int minWidth, final int minHeight) {
 		if (owner != null) {
-			final int letterHeight = graphcis.getFont().getHeight("A"); //TODO: это же константа, нужно вынести куда-нибудь
-			final int letterWidth = graphcis.getFont().getHeight("A"); //TODO: это же константа, нужно вынести куда-нибудь
+			final int letterHeight = ImageConstants.fontHeightInPixels;
+			final int letterWidth = ImageConstants.fontWidthInPixels;
 			
 			List<GameObject> inventory = (List<GameObject>) owner.getAttributes().get(Attribute.INVENTORY_GAME_OBJECT_LIST);
 			if (inventory != null && !inventory.isEmpty()) {
