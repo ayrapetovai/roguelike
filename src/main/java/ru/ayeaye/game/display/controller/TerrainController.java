@@ -107,6 +107,7 @@ public class TerrainController extends WidgetController {
 				GameLogicEngine.getInstance().addAction(playerCommand);
 			}
 			if (mouseButton == Input.MOUSE_RIGHT_BUTTON) {
+				final Widget contextMenuparent = caller;
 				ContextWidget fieldContextMenue = caller.getContextWidget();
 				if (fieldContextMenue == null) {
 					
@@ -116,6 +117,22 @@ public class TerrainController extends WidgetController {
 					button.setText("info");
 					button.setMouseOverColor(Color.red);
 					button.setMouseOffColor(Color.gray);
+					button.setController(new WidgetController() {
+						@Override
+						public void handleMouseOff(Widget caller) {}
+						@Override
+						public void handleMouse(Widget caller, int mouseButton, int modifier,
+								int mouseX, int mouseY, int absoluteX, int absoluteY, int minWidth,
+								int minHeight) {
+							if (mouseButton == Input.MOUSE_LEFT_BUTTON) {
+								log.debug("Button " + caller.getName() + " activeted, modifier: " + modifier);
+								// FIXME: caller.getParentWidget().setVisible(false);
+								contextMenuparent.getContextWidget().setVisible(false);
+							}
+						}
+						@Override
+						public void handleKey(Widget caller, int keyCode, int modifier) {}
+					});
 					contextButtons.add(button);
 					button = new ButtonWidget("walk", 1f, 1f);
 					button.setText("walk");

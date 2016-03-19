@@ -2,7 +2,6 @@ package ru.ayeaye.game.display.widgets;
 
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Input;
 
 import ru.ayeaye.game.display.ImageConstants;
 
@@ -53,9 +52,8 @@ public class ButtonWidget extends Widget {
 	@Override
 	public void dispatchMouseEvent(int mouseButton, int modifier, int mouseX, int mouseY, int absoluteX, int absoluteY, int minWidth, int minHeight) {
 		mouseOver = true;
-		if (mouseButton == Input.MOUSE_LEFT_BUTTON) {
-			log.debug("Button " + getName() + " activeted, modifier: " + modifier);
-		}
+		// FIXME: this.getController().dispatchMouseEvent(mouseButton, modifier, mouseX, mouseY, absoluteX, absoluteY, minWidth, minHeight); ?
+		super.dispatchMouseEvent(mouseButton, modifier, mouseX, mouseY, absoluteX, absoluteY, minWidth, minHeight);
 	}
 	
 	@Override

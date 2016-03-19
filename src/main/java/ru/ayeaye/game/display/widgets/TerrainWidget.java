@@ -1,8 +1,8 @@
 package ru.ayeaye.game.display.widgets;
 
 import org.newdawn.slick.Graphics;
+
 import ru.ayeaye.game.display.ImageConstants;
-import ru.ayeaye.game.display.controller.TerrainController;
 import ru.ayeaye.game.display.layouts.AbstractLayout;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameField;
