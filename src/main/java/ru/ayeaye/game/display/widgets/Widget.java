@@ -60,7 +60,7 @@ public class Widget {
 	private boolean alowedToDispatchMouse = true;
 	private boolean alowedToDispatchKey = true;
 	
-	protected WidgetController controller; // TODO: private
+	private WidgetController controller;
 	
 	public Widget(String name) {
 		this.name = name;
@@ -280,6 +280,10 @@ public class Widget {
 
 	public void setAlowedToDispatchKey(boolean alowedToDispatchKey) {
 		this.alowedToDispatchKey = alowedToDispatchKey;
+	}
+
+	public void setController(WidgetController controller) {
+		this.controller = controller;
 	}
 
 	@Override

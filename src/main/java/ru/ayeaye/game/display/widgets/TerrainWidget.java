@@ -77,7 +77,6 @@ public class TerrainWidget extends Widget {
 	
 	public void setGameField(GameField gameField) {
 		this.gameField = gameField;
-		this.controller = new TerrainController(gameField);
 	}
 	
 	@Override // Никаких разметок для этого виджета, он отображает только игровое поле

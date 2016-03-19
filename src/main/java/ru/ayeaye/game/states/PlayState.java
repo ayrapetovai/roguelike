@@ -24,6 +24,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.display.ImageConstants;
+import ru.ayeaye.game.display.controller.TerrainController;
 import ru.ayeaye.game.display.layouts.AbstractLayout;
 import ru.ayeaye.game.display.layouts.HorizontalLayout;
 import ru.ayeaye.game.display.layouts.ParentRelativeLayout;
@@ -250,6 +251,7 @@ public class PlayState extends BasicGameState {
 		TerrainWidget terrain = new TerrainWidget("terrain");
 		terrain.setGameField(gm.getField());
 		terrain.setBackgroundColor(Color.gray);
+		terrain.setController(new TerrainController(gm.getField()));
 		
 		GameLogWidget gameLog = new GameLogWidget("log", 0, 100);
 		gameLog.setLogSource(gm.getGameLogSource());
