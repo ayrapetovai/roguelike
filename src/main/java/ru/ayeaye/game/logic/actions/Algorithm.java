@@ -96,7 +96,7 @@ public class Algorithm {
 				makeMeleDamage(sourceGO, targetGO) && isDestroyed(targetGO) && markDestroyed(targetGO);
 	}
 	public boolean doMoveThrowPath(GameObject sourceGO, FieldCell targetCell) {
-		return calcPath(sourceGO, targetCell) && pathIsNotOver() && doMoveToCell(sourceGO, getNextPathCell()) && proceedOnPath();
+		return calcPath(sourceGO, targetCell) && doMoveToCell(sourceGO, getNextPathCell());
 	}
 	public boolean doMoveToCell(GameObject sourceGO, FieldCell targetCell) {
 		return canMove(sourceGO) && areNear(sourceGO, targetCell) && isStandable(targetCell) && putCreatureInCell(sourceGO, targetCell);
@@ -107,37 +107,24 @@ public class Algorithm {
 	}
 	//********************************************************
 	// Работа с путем от одной клетки до другой
-	public boolean isMoveThrowPathContinuos() {
-		return pathIsNotOver() && isStandable(getNextPathCell());
+	public boolean isMoveThrowPathContinuos(GameObject sourceGO, FieldCell targetCell) {
+		List<FieldCell> path = APath.findPath(sourceGO.getLocationCell(), targetCell);
+		return path.size() > 1 && isStandable(path.get(1));
 	}
 	private boolean calcPath(GameObject sourceGO, FieldCell targetCell) {
-		List<FieldCell> path = (List<FieldCell>) context.get(ActionParameter.PATH_FIELD_CELLS);
-		int counter = 1;
-		if (path == null) {
-			path = APath.findPath(sourceGO.getLocationCell(), targetCell);
-			context.put(ActionParameter.PATH_FIELD_CELLS, path);
-			context.put(ActionParameter.COUNTER_INTEGER, counter);
-			if (path.size() < 1)
-				return false;
-		}
-		return true;
+		List<FieldCell> path = APath.findPath(sourceGO.getLocationCell(), targetCell);
+		context.put(ActionParameter.PATH_FIELD_CELLS, path);
+		return path.size() > 1;
 	}
 	private boolean pathIsNotOver() {
 		List<FieldCell> path = (List<FieldCell>) context.get(ActionParameter.PATH_FIELD_CELLS);
-		int counter = (Integer) context.get(ActionParameter.COUNTER_INTEGER);
-		return counter < path.size();
+		return path.size() > 1;
 	}
 	private FieldCell getNextPathCell() {
 		List<FieldCell> path = (List<FieldCell>) context.get(ActionParameter.PATH_FIELD_CELLS);
-		int counter = (Integer) context.get(ActionParameter.COUNTER_INTEGER);
-		if (counter < path.size())
-			return path.get(counter);
+		if (path.size() > 1)
+			return path.get(1);
 		return null; 
-	}
-	private boolean proceedOnPath() {
-		int counter = (Integer) context.get(ActionParameter.COUNTER_INTEGER) + 1;
-		context.put(ActionParameter.COUNTER_INTEGER, counter);
-		return true; 
 	}
 	//********************************************************
 	

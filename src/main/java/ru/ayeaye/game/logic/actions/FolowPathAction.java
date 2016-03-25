@@ -27,7 +27,9 @@ public class FolowPathAction extends GenericAction {
 
 	@Override
 	public boolean isContinuos() {
-		return algo.isMoveThrowPathContinuos();
+		GameObject sourceGO = (GameObject) context.get(ActionParameter.SOURCE_GAME_OBJECT);
+		FieldCell targetCell = (FieldCell) context.get(ActionParameter.TARGET_FIELD_CELL);
+		return algo.isMoveThrowPathContinuos(sourceGO, targetCell);
 	}
 
 	@Override

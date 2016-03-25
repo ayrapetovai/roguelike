@@ -8,8 +8,6 @@ public enum ActionParameter {
 	TARGET_FIELD_CELL,
 	SOURCE_FIELD_CELL,
 	
-	COUNTER_INTEGER,
-	
 	ACTION_TYPE,
 	PATH_FIELD_CELLS
 }
