@@ -156,6 +156,7 @@ public class PlayState extends BasicGameState {
 		player.getAttributes().put(Attribute.HIT_POINTS_INT, 5);
 		player.getAttributes().put(Attribute.ATTACK_POINTS_INT, 1);
 		player.getAttributes().put(Attribute.MELE_ATTACK_SPEED_FLOAT, 1.5f);
+		player.getAttributes().put(Attribute.CONJURE_SPEED_FLOAT, 2f);
 		player.getAttributes().put(Attribute.MOVE_SPEED_FLOAT, 1f); 
 		player.getAttributes().put(Attribute.DESCRIPTION_STRING, "demon");
 		player.getAttributes().put(Attribute.INVENTORY_GAME_OBJECT_LIST, createInventoryItems());
@@ -167,6 +168,8 @@ public class PlayState extends BasicGameState {
 		GameObject axe = new GameObject();
 		axe.setImage(ImageConstants.getInstance().exe);
 		axe.getAttributes().put(Attribute.DESCRIPTION_STRING, "axe +5Str, -2Int, -2Stmn");
+		result.add(axe);
+		result.add(axe);
 		result.add(axe);
 		return result;
 	}

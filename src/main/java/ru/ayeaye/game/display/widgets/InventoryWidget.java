@@ -31,8 +31,11 @@ public class InventoryWidget extends Widget {
 			
 			List<GameObject> inventory = (List<GameObject>) owner.getAttributes().get(Attribute.INVENTORY_GAME_OBJECT_LIST);
 			if (inventory != null && !inventory.isEmpty()) {
+				int offset = 0;
 				for (GameObject item: inventory) {
-					graphcis.drawImage(item.getImage(), absoluteX + minWidth/2 - item.getImage().getWidth() / 2, absoluteY + minHeight/2 - item.getImage().getHeight()/2);
+					graphcis.drawImage(item.getImage(), absoluteX, absoluteY + offset);
+					graphcis.drawString((String) item.getAttributes().get(Attribute.DESCRIPTION_STRING), absoluteX + item.getImage().getWidth(), absoluteY + item.getImage().getHeight()/2 - letterHeight/2 + offset);
+					offset += item.getImage().getHeight();
 				}
 			} else {
 				String msg = "Empty";
