@@ -5,7 +5,9 @@ import java.util.TreeMap;
 
 import ru.ayeaye.game.logic.actions.ActionParameter;
 import ru.ayeaye.game.logic.actions.ActionType;
+import ru.ayeaye.game.logic.actions.FolowPathAction;
 import ru.ayeaye.game.logic.actions.GenericAction;
+import ru.ayeaye.game.logic.actions.MeleAttackAction;
 import ru.ayeaye.game.logic.misc.Direction;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
@@ -25,15 +27,14 @@ public class PlayerMadeMousePushOnFieldCell implements PlayerCommand {
 		boolean cellsAreNear = targetFiledCell.isNeighborOf(model.getField().getPlayer().getLocationCell());
 		boolean thereIsCreatureInCell = targetFiledCell.hasObjectWithTag(Tag.CREATURE); 
 		Map<ActionParameter, Object> context = new TreeMap<>();
-		GenericAction action;
-		if (cellsAreNear && thereIsCreatureInCell) {
-			action = new GenericAction(ActionType.ATTACK);
-			context.put(ActionParameter.TARGET_GAME_OBJECT, targetFiledCell.getObjectWithTag(Tag.CREATURE));
-		} else
-			action = new GenericAction(ActionType.MOVE_THROW_PATH);
 		context.put(ActionParameter.SOURCE_GAME_OBJECT, model.getField().getPlayer());
 		context.put(ActionParameter.TARGET_FIELD_CELL, targetFiledCell);
-		action.setContext(context);
+		GenericAction action;
+		if (cellsAreNear && thereIsCreatureInCell) {
+			action = new MeleAttackAction(context);
+			context.put(ActionParameter.TARGET_GAME_OBJECT, targetFiledCell.getObjectWithTag(Tag.CREATURE));
+		} else
+			action = new FolowPathAction(context);
 		return action;
 	}
 

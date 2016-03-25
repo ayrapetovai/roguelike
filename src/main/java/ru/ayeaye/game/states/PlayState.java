@@ -155,7 +155,7 @@ public class PlayState extends BasicGameState {
 		player.getTags().add(Tag.DESTRACTABLE);
 		player.getAttributes().put(Attribute.HIT_POINTS_INT, 5);
 		player.getAttributes().put(Attribute.ATTACK_POINTS_INT, 1);
-		player.getAttributes().put(Attribute.ATTACK_SPEED_FLOAT, 1.5f);
+		player.getAttributes().put(Attribute.MELE_ATTACK_SPEED_FLOAT, 1.5f);
 		player.getAttributes().put(Attribute.MOVE_SPEED_FLOAT, 1f); 
 		player.getAttributes().put(Attribute.DESCRIPTION_STRING, "demon");
 		player.getAttributes().put(Attribute.INVENTORY_GAME_OBJECT_LIST, createInventoryItems());

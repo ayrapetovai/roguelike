@@ -11,88 +11,25 @@ import ru.ayeaye.game.model.Tag;
 import ru.ayeaye.game.util.APath;
 
 public class Algorithm {
-	private Map<ActionParameter, Object> context;
-	private ActionType actionType;
-	
-	public Algorithm(Map<ActionParameter, Object> context, ActionType actionType) {
-		this.context = context;
-		this.actionType = actionType;
-	}
-	
-	public boolean execute() {
-		GameObject sourceGO = (GameObject) context.get(ActionParameter.SOURCE_GAME_OBJECT);
-		GameObject targetGO = (GameObject) context.get(ActionParameter.TARGET_GAME_OBJECT);
-		
-		FieldCell targetCell = (FieldCell) context.get(ActionParameter.TARGET_FIELD_CELL);
-		
-		switch (actionType) {
-		case ATTACK:
-			attack(sourceGO, targetGO);
-			break;
-		case MOVE_TO_CELL:
-			moveNextCell(sourceGO, targetCell);
-			break;
-		case MOVE_THROW_PATH:
-			moveThrowPath(sourceGO, targetCell);
-			break;
-		default:
-			throw new IllegalStateException("No actoin implementation for " + actionType);
-		}
-		return true;
-	}
-	
-	public float getDelay() {
-		GameObject sourceGO = (GameObject) context.get(ActionParameter.SOURCE_GAME_OBJECT);;
-		FieldCell targetCell = (FieldCell) context.get(ActionParameter.TARGET_FIELD_CELL);
-		
-		float ret;
-		switch (actionType) {
-		case ATTACK:
-			ret = getAttackDelay(sourceGO);
-			break;
-		case MOVE_TO_CELL:
-			ret = getMoveDelay(sourceGO, targetCell);
-			break;
-		case MOVE_THROW_PATH:
-			ret = getMovePathDelay(sourceGO, targetCell);
-			break;
-		default:
-			throw new IllegalStateException("No actoin implementation for " + actionType);
-		}
-		return ret;
-	}
-	
-	public boolean isContinuos() {
-		GameObject sourceGO = (GameObject) context.get(ActionParameter.SOURCE_GAME_OBJECT);;
-		FieldCell targetCell = (FieldCell) context.get(ActionParameter.TARGET_FIELD_CELL);
-		
-		boolean ret;
-		switch (actionType) {
-		case ATTACK:
-			ret = false;
-			break;
-		case MOVE_TO_CELL:
-			ret = false;
-			break;
-		case MOVE_THROW_PATH:
-			ret = pathIsNotOver() && isStandable(getNextPathCell());
-			break;
-		default:
-			throw new IllegalStateException("No actoin implementation for " + actionType);
-		}
-		return ret;
-	}
+	private final Map<ActionParameter, Object> context;
 
+	public Algorithm(Map<ActionParameter, Object> context) {
+		this.context = context;
+	}
+	
 	//***************************************************************
 	// алгоритмы расчета времени выполнения действия
-	private float getMoveDelay(GameObject sourceGO, FieldCell targetCell) {
+	public float getMoveDelay(GameObject sourceGO, FieldCell targetCell) {
 		return (Float) sourceGO.getAttributes().get(Attribute.MOVE_SPEED_FLOAT) *
 				(sourceGO.getLocationCell().getDirectionTo(targetCell).isDiagonal()? 1.2f: 1f);
 	}
-	private float getAttackDelay(GameObject sourceGO) {
-		return (Float) sourceGO.getAttributes().get(Attribute.ATTACK_SPEED_FLOAT);
+	public float getMeleAttackDelay(GameObject sourceGO) {
+		return (Float) sourceGO.getAttributes().get(Attribute.MELE_ATTACK_SPEED_FLOAT);
 	}
-	private float getMovePathDelay(GameObject sourceGO, FieldCell targetCell) {
+	public float getConjureDelay(GameObject sourceGO) {
+		return (Float) sourceGO.getAttributes().get(Attribute.CONJURE_SPEED_FLOAT);
+	}
+	public float getMovePathDelay(GameObject sourceGO, FieldCell targetCell) {
 		if (calcPath(sourceGO, targetCell)) {
 			if (pathIsNotOver() && isStandable(getNextPathCell()))
 				return getMoveDelay(sourceGO, getNextPathCell());
@@ -149,25 +86,30 @@ public class Algorithm {
 		}
 	}
 	private boolean markDestroyed(GameObject targetGO) {
-//		targetGO.getLocationCell().removeGameObject(targetGO);
 		targetGO.setImage(ImageConstants.getInstance().corpse);
 		targetGO.getTags().remove(Tag.CREATURE);
 		return targetGO.getTags().add(Tag.DESTROYED);
 	}
-	private boolean attack(GameObject sourceGO, GameObject targetGO) {
+	public boolean doMeleAttack(GameObject sourceGO, GameObject targetGO) {
 		return canMove(sourceGO) && areNear(sourceGO, targetGO) &&
 				isDestractable(targetGO) && canAttack(sourceGO) && !isDestroyed(targetGO) &&
 				makeMeleDamage(sourceGO, targetGO) && isDestroyed(targetGO) && markDestroyed(targetGO);
 	}
-	private boolean moveThrowPath(GameObject sourceGO, FieldCell targetCell) {
-		return calcPath(sourceGO, targetCell) && pathIsNotOver() && moveNextCell(sourceGO, getNextPathCell()) && proceedOnPath();
+	public boolean doMoveThrowPath(GameObject sourceGO, FieldCell targetCell) {
+		return calcPath(sourceGO, targetCell) && pathIsNotOver() && doMoveToCell(sourceGO, getNextPathCell()) && proceedOnPath();
 	}
-	private boolean moveNextCell(GameObject sourceGO, FieldCell targetCell) {
+	public boolean doMoveToCell(GameObject sourceGO, FieldCell targetCell) {
 		return canMove(sourceGO) && areNear(sourceGO, targetCell) && isStandable(targetCell) && putCreatureInCell(sourceGO, targetCell);
 	}
-	
+	public boolean doConjure(GameObject sourceGO, GameObject targetGO) {
+		System.out.println("BOOM!");
+		return true;
+	}
 	//********************************************************
 	// Работа с путем от одной клетки до другой
+	public boolean isMoveThrowPathContinuos() {
+		return pathIsNotOver() && isStandable(getNextPathCell());
+	}
 	private boolean calcPath(GameObject sourceGO, FieldCell targetCell) {
 		List<FieldCell> path = (List<FieldCell>) context.get(ActionParameter.PATH_FIELD_CELLS);
 		int counter = 1;

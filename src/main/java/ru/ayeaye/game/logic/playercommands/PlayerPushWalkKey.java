@@ -4,8 +4,9 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import ru.ayeaye.game.logic.actions.ActionParameter;
-import ru.ayeaye.game.logic.actions.ActionType;
 import ru.ayeaye.game.logic.actions.GenericAction;
+import ru.ayeaye.game.logic.actions.MeleAttackAction;
+import ru.ayeaye.game.logic.actions.MoveAction;
 import ru.ayeaye.game.logic.misc.Direction;
 import ru.ayeaye.game.model.FieldCell;
 import ru.ayeaye.game.model.GameModel;
@@ -24,18 +25,17 @@ public class PlayerPushWalkKey implements PlayerCommand {
 			return null;
 		}
 		Map<ActionParameter, Object> context = new TreeMap<>();
-		ActionType at;
-		GameObject creature = targetFiledCell.getObjectWithTag(Tag.CREATURE);
-		if (creature != null && creature != model.getField().getPlayer()) {
-			at = ActionType.ATTACK;
-			context.put(ActionParameter.TARGET_GAME_OBJECT, targetFiledCell.getObjectWithTag(Tag.CREATURE));
-		} else {
-			at = ActionType.MOVE_TO_CELL;
-		}
-		ru.ayeaye.game.logic.actions.GenericAction action = new GenericAction(at);
 		context.put(ActionParameter.SOURCE_GAME_OBJECT, model.getField().getPlayer());
 		context.put(ActionParameter.TARGET_FIELD_CELL, model.getField().getPlayer().getLocationCell().getNeighbourCell(direction));
-		action.setContext(context);
+
+		GameObject creature = targetFiledCell.getObjectWithTag(Tag.CREATURE);
+		GenericAction action;
+		if (creature != null && creature != model.getField().getPlayer()) {
+			context.put(ActionParameter.TARGET_GAME_OBJECT, targetFiledCell.getObjectWithTag(Tag.CREATURE));
+			action = new MeleAttackAction(context);
+		} else {
+			action = new MoveAction(context);
+		}
 		return action;
 	}
 

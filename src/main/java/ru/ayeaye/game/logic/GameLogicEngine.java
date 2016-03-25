@@ -1,14 +1,10 @@
 package ru.ayeaye.game.logic;
 
 import java.util.List;
-import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import ru.ayeaye.game.logic.actions.ActionParameter;
-import ru.ayeaye.game.logic.actions.ActionType;
-import ru.ayeaye.game.logic.actions.Algorithm;
 import ru.ayeaye.game.logic.actions.GenericAction;
 import ru.ayeaye.game.logic.playercommands.PlayerCommand;
 import ru.ayeaye.game.logic.states.LogicState;
@@ -49,10 +45,9 @@ public class GameLogicEngine {
 					trigger.preApplay(action.getContext());
 				}
 				
-				Algorithm algo = action.getAlgo();
-				log.debug("Action delay is " + algo.getDelay());
+				log.debug("Action delay is " + action.getDelay());
 				
-				algo.execute();
+				action.execute();
 				
 				if (trigger != null) {
 					GenericAction triggerAction = trigger.postApplay(action.getContext());
@@ -61,7 +56,7 @@ public class GameLogicEngine {
 					}
 				}
 				
-				if (algo.isContinuos()) {
+				if (action.isContinuos()) {
 					model.getTimeQueue().addAction(action);
 				}
 			}
