@@ -12,6 +12,7 @@ import ru.ayeaye.game.util.APath;
 
 public class Algorithm {
 	private final Map<ActionParameter, Object> context;
+	private final float sqrt2 = (float) Math.sqrt(1.2);
 
 	public Algorithm(Map<ActionParameter, Object> context) {
 		this.context = context;
@@ -21,7 +22,7 @@ public class Algorithm {
 	// алгоритмы расчета времени выполнения действия
 	public float getMoveDelay(GameObject sourceGO, FieldCell targetCell) {
 		return (Float) sourceGO.getAttributes().get(Attribute.MOVE_SPEED_FLOAT) *
-				(sourceGO.getLocationCell().getDirectionTo(targetCell).isDiagonal()? 1.2f: 1f);
+				(sourceGO.getLocationCell().getDirectionTo(targetCell).isDiagonal()? sqrt2: 1f);
 	}
 	public float getMeleAttackDelay(GameObject sourceGO) {
 		return (Float) sourceGO.getAttributes().get(Attribute.MELE_ATTACK_SPEED_FLOAT);
@@ -63,7 +64,7 @@ public class Algorithm {
 		return sourceGO.getLocationCell().isNeighborOf(targetGO.getLocationCell());
 	}
 	private boolean putCreatureInCell(GameObject sourceGO, FieldCell targetCell) {
-		sourceGO.getLocationCell().popGameObject();
+		sourceGO.getLocationCell().removeGameObject(sourceGO);
 		targetCell.pushGameObject(sourceGO);
 		return true;
 	}
