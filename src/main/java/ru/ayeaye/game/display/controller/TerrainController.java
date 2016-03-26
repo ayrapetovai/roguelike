@@ -74,7 +74,7 @@ public class TerrainController extends WidgetController {
 			}
 			GameLogicEngine.getInstance().addAction(playerCommand);
 		} else {
-			log.debug("Key is not bound");
+			log.debug("Key {} is not bound", keyCode);
 		}
 	}
 
@@ -125,7 +125,7 @@ public class TerrainController extends WidgetController {
 								int mouseX, int mouseY, int absoluteX, int absoluteY, int minWidth,
 								int minHeight) {
 							if (mouseButton == Input.MOUSE_LEFT_BUTTON) {
-								log.debug("Button " + caller.getName() + " activeted, modifier: " + modifier);
+								log.debug("Button {} activeted, modifier: {}", caller.getName(), modifier);
 								// FIXME: caller.getParentWidget().setVisible(false);
 								contextMenuparent.getContextWidget().setVisible(false);
 							}

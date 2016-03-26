@@ -118,7 +118,8 @@ public class Widget {
 	}
 	
 	public void dispatchMouseEvent(int mouseButton, int modifier, int mouseX, int mouseY, int absoluteX, int absoluteY, int minWidth, int minHeight) {
-		if (mouseButton == 0) log.debug("Widget " + name + " dispatching mouse " + mouseX + ": " + mouseY);
+		if (mouseButton == 0)
+			log.debug("Widget {} dispatching mouse {}: {}", name, mouseX, mouseY);
 		if (contextWidget != null && contextWidget.isVisible()) {
 			if (!contextWidget.isVisible() || contextWidget.isFolowMouse()) {
 				int fix = -15;
@@ -146,7 +147,7 @@ public class Widget {
 	}
 	
 	public void endDispatchMouseEvent() {
-		log.debug(getName() + ": endDispatchingMouse");
+		log.debug("{}: endDispatchingMouse", getName());
 		if (layout != null) {
 			layout.endDispatchMouseEvent();
 		}
@@ -159,13 +160,13 @@ public class Widget {
 	}
 	
 	public void dispatchKeyEvent(int keyCode, int modifier) {
-		log.debug("Widget " + name + " dispatching key");
+		log.debug("Widget {} dispatching key", name);
 		if (contextWidget != null && contextWidget.isVisible()) {
 			contextWidget.dispatchKeyEvent(keyCode, modifier);
 		} else if (layout != null) {
 			layout.dispatchKeyEvent(keyCode, modifier);
 		} else if (controller != null) {
-			log.debug("Widget " + name + " ends key dispatching");
+			log.debug("Widget {} ends key dispatching", name);
 			controller.handleKey(this, keyCode, modifier);
 		}
 	}

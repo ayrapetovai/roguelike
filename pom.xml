@@ -10,8 +10,7 @@
 	</properties>
 
 	<dependencies>
-		<!-- Для сериализации/десериализации модели в json-файл, так в игре осуществляется 
-			сохранение -->
+		<!-- Для сериализации/десериализации модели в json-файл, так в игре осуществляется сохранение -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
@@ -41,8 +40,18 @@
 		<!-- Логирование -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.13</version>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.19</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.1.6</version>
 		</dependency>
 
 	</dependencies>

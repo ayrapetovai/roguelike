@@ -517,7 +517,7 @@ public class PlayState extends BasicGameState {
 		int keyCode = GameInputListener.getInstance().getKey();
 		if (keyCode != 0) {
 			int modifier = GameInputListener.getInstance().getModifier();
-//			log.debug("Key pressed " + Input.getKeyName(modifier) + "-" + Input.getKeyName(keyCode) + " " + "(" + keyCode + ")");
+//			log.debug("Key pressed {}-{} ({})", Input.getKeyName(modifier), Input.getKeyName(keyCode), keyCode;
 			mainFrame.dispatchKeyEvent(keyCode, modifier);
 			GameInputListener.getInstance().clearKey();
 		}

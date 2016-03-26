@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 public class NativeLoader {
 
-    public static final Logger LOG = LoggerFactory.getLogger(NativeLoader.class);
+    public static final Logger log = LoggerFactory.getLogger(NativeLoader.class);
 
     public NativeLoader() {
     }
@@ -19,8 +19,7 @@ public class NativeLoader {
         try {
             System.load(saveLibrary(library));
         } catch (IOException e) {
-            LOG.warn("Could not find library " + library +
-                    " as resource, trying fallback lookup through System.loadLibrary");
+            log.warn("Could not find library {} as resource, trying fallback lookup through System.loadLibrary", library);
             System.loadLibrary(library);
         }
     }
@@ -82,7 +81,7 @@ public class NativeLoader {
             while ((cnt = in.read(buf)) >= 1) {
                 out.write(buf, 0, cnt);
             }
-            LOG.info("Saved libfile: " + file.getAbsoluteFile());
+            log.info("Saved libfile: {}", file.getAbsoluteFile());
             return file.getAbsolutePath();
         } finally {
             if (in != null) {
