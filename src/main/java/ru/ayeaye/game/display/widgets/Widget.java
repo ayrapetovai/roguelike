@@ -121,6 +121,9 @@ public class Widget {
 		if (mouseButton == 0)
 			log.debug("Widget {} dispatching mouse {}: {}", name, mouseX, mouseY);
 		if (contextWidget != null && contextWidget.isVisible()) {
+			if (!contextWidget.containsPoint(mouseX, mouseY, contextWidget.getOffsetX(), contextWidget.getOffsetY())) {
+				contextWidget.setVisible(false);
+			}
 			if (!contextWidget.isVisible() || contextWidget.isFolowMouse()) {
 				int fix = -15;
 				if (!contextWidget.isFolowMouse()) {
@@ -128,17 +131,13 @@ public class Widget {
 				}
 				contextWidget.setOffsetX(mouseX - fix);
 				contextWidget.setOffsetY(mouseY - fix);
-			} else {
-				if (!contextWidget.containsPoint(mouseX, mouseY, contextWidget.getOffsetX(), contextWidget.getOffsetY())) {
-					contextWidget.setVisible(false);
-				}
 			}
 			if (contextWidget.isVisible() && !contextWidget.isFolowMouse())
 				contextWidget.dispatchMouseEvent(mouseButton, modifier, mouseX, mouseY, absoluteX, absoluteY, minWidth, minHeight);
 		} else if (layout != null) {
 			layout.dispatchMouseEvent(mouseButton, modifier, mouseX, mouseY, absoluteX, absoluteY, Math.min(width, minWidth), Math.min(height, minHeight));
 		} else {
-			if (mouseButton == 0) log.debug("Widget " + name + " ends mouse dispatching");
+			if (mouseButton == 0) log.debug("Widget {} ends mouse dispatching", name);
 			if (controller != null)
 				controller.handleMouse(this, mouseButton, modifier, mouseX, mouseY, absoluteX, absoluteY, Math.min(width, minWidth), Math.min(height, minHeight));
 		}

@@ -25,6 +25,7 @@ import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.display.ImageConstants;
 import ru.ayeaye.game.display.controller.TerrainController;
+import ru.ayeaye.game.display.controller.WidgetController;
 import ru.ayeaye.game.display.layouts.AbstractLayout;
 import ru.ayeaye.game.display.layouts.HorizontalLayout;
 import ru.ayeaye.game.display.layouts.ParentRelativeLayout;
@@ -256,6 +257,8 @@ public class PlayState extends BasicGameState {
 		terrain.setBackgroundColor(Color.gray);
 		terrain.setController(new TerrainController(gm.getField()));
 		
+		terrain.setContextWidget(createContextWidget(terrain));
+		
 		GameLogWidget gameLog = new GameLogWidget("log", 0, 100);
 		gameLog.setLogSource(gm.getGameLogSource());
 		gameLog.setAlowedToDispatchMouse(false);
@@ -309,6 +312,57 @@ public class PlayState extends BasicGameState {
 		GameLogicEngine.getInstance().setModel(gm);
 		
 		return mainFrame;
+	}
+
+	private ContextWidget createContextWidget(final Widget parent) {
+		List<Widget> contextButtons = new ArrayList<Widget>();
+		
+		ButtonWidget button = new ButtonWidget("info", 1f, 1f);
+		button.setText("info");
+		button.setMouseOverColor(Color.red);
+		button.setMouseOffColor(Color.gray);
+		button.setController(new WidgetController() {
+			@Override
+			public void handleMouseOff(Widget caller) {}
+			@Override
+			public void handleMouse(Widget caller, int mouseButton, int modifier,
+					int mouseX, int mouseY, int absoluteX, int absoluteY, int minWidth,
+					int minHeight) {
+				if (mouseButton == Input.MOUSE_LEFT_BUTTON) {
+					log.debug("Button {} activeted, modifier: {}", caller.getName(), modifier);
+					// FIXME: caller.getParentWidget().setVisible(false);
+					parent.getContextWidget().setVisible(false);
+				}
+			}
+			@Override
+			public void handleKey(Widget caller, int keyCode, int modifier) {}
+		});
+		contextButtons.add(button);
+		button = new ButtonWidget("walk", 1f, 1f);
+		button.setText("walk");
+		button.setMouseOverColor(Color.red);
+		button.setMouseOffColor(Color.gray);
+		contextButtons.add(button);
+		button = new ButtonWidget("spell", 1f, 1f);
+		button.setText("spell");
+		button.setMouseOverColor(Color.red);
+		button.setMouseOffColor(Color.gray);
+		contextButtons.add(button);
+		button = new ButtonWidget("attack", 1f, 1f);
+		button.setText("attack");
+		button.setMouseOverColor(Color.red);
+		button.setMouseOffColor(Color.gray);
+		contextButtons.add(button);
+		
+		ContextWidget fieldContextMenu = new ContextWidget("field context", 70, 26 * contextButtons.size());
+		AbstractLayout labelLayout = new VerticalLayout();
+		for (Widget w: contextButtons) {
+			w.setHeightProportion(1f/contextButtons.size());
+			labelLayout.addWidget(w);
+		}
+		
+		fieldContextMenu.setLayout(labelLayout);
+		return fieldContextMenu;
 	}
 
 	private Widget getLogAndTerrains() {

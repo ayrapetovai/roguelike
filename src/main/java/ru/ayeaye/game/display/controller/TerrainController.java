@@ -1,19 +1,13 @@
 package ru.ayeaye.game.display.controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import org.newdawn.slick.Color;
 import org.newdawn.slick.Input;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import ru.ayeaye.game.display.ImageConstants;
-import ru.ayeaye.game.display.layouts.AbstractLayout;
-import ru.ayeaye.game.display.layouts.VerticalLayout;
-import ru.ayeaye.game.display.widgets.ButtonWidget;
 import ru.ayeaye.game.display.widgets.ContextWidget;
 import ru.ayeaye.game.display.widgets.Widget;
 import ru.ayeaye.game.logic.GameLogicEngine;
@@ -107,69 +101,11 @@ public class TerrainController extends WidgetController {
 				GameLogicEngine.getInstance().addAction(playerCommand);
 			}
 			if (mouseButton == Input.MOUSE_RIGHT_BUTTON) {
-				final Widget contextMenuparent = caller;
-				ContextWidget fieldContextMenue = caller.getContextWidget();
-				if (fieldContextMenue == null) {
-					
-					List<Widget> contextButtons = new ArrayList<Widget>();
-					
-					ButtonWidget button = new ButtonWidget("info", 1f, 1f);
-					button.setText("info");
-					button.setMouseOverColor(Color.red);
-					button.setMouseOffColor(Color.gray);
-					button.setController(new WidgetController() {
-						@Override
-						public void handleMouseOff(Widget caller) {}
-						@Override
-						public void handleMouse(Widget caller, int mouseButton, int modifier,
-								int mouseX, int mouseY, int absoluteX, int absoluteY, int minWidth,
-								int minHeight) {
-							if (mouseButton == Input.MOUSE_LEFT_BUTTON) {
-								log.debug("Button {} activeted, modifier: {}", caller.getName(), modifier);
-								// FIXME: caller.getParentWidget().setVisible(false);
-								contextMenuparent.getContextWidget().setVisible(false);
-							}
-						}
-						@Override
-						public void handleKey(Widget caller, int keyCode, int modifier) {}
-					});
-					contextButtons.add(button);
-					button = new ButtonWidget("walk", 1f, 1f);
-					button.setText("walk");
-					button.setMouseOverColor(Color.red);
-					button.setMouseOffColor(Color.gray);
-					contextButtons.add(button);
-					button = new ButtonWidget("spell", 1f, 1f);
-					button.setText("spell");
-					button.setMouseOverColor(Color.red);
-					button.setMouseOffColor(Color.gray);
-					contextButtons.add(button);
-					button = new ButtonWidget("attack", 1f, 1f);
-					button.setText("attack");
-					button.setMouseOverColor(Color.red);
-					button.setMouseOffColor(Color.gray);
-					contextButtons.add(button);
-					
-					fieldContextMenue = new ContextWidget("field context", 70, 26 * contextButtons.size());
-					AbstractLayout labelLayout = new VerticalLayout();
-					for (Widget w: contextButtons) {
-						w.setHeightProportion(1f/contextButtons.size());
-						labelLayout.addWidget(w);
-					}
-					
-					fieldContextMenue.setLayout(labelLayout);
-					
-					fieldContextMenue.setVisible(true);
-					fieldContextMenue.setFolowMouse(false);
-					fieldContextMenue.setOffsetX(mouseX - 10);
-					fieldContextMenue.setOffsetY(mouseY - 10);
-					caller.setContextWidget(fieldContextMenue);
-				} else {
-					fieldContextMenue.setVisible(true);
-					fieldContextMenue.setFolowMouse(false);
-					fieldContextMenue.setOffsetX(mouseX - 10);
-					fieldContextMenue.setOffsetY(mouseY - 10);
-				}
+				ContextWidget contextMenu = caller.getContextWidget();
+				contextMenu.setVisible(true);
+				contextMenu.setFolowMouse(false);
+				contextMenu.setOffsetX(mouseX - 10);
+				contextMenu.setOffsetY(mouseY - 10);
 			}
 		} else {
 			gameField.diselectCell();

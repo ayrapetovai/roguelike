@@ -11,8 +11,8 @@ import ru.ayeaye.game.model.Tag;
 import ru.ayeaye.game.util.APath;
 
 public class Algorithm {
+	private static final float sqrt2 = (float) Math.sqrt(2);
 	private final Map<ActionParameter, Object> context;
-	private final float sqrt2 = (float) Math.sqrt(1.2);
 
 	public Algorithm(Map<ActionParameter, Object> context) {
 		this.context = context;
