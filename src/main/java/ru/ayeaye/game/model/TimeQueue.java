@@ -10,10 +10,10 @@ import ru.ayeaye.game.logic.actions.GenericAction;
 
 public class TimeQueue {
 
-	private class ActionHolder {
-		GenericAction action;
+	public class ActionHolder {
+		public GenericAction action;
 		float endTime;
-		public void init(GenericAction action) {
+		void init(GenericAction action) {
 			this.action = action;
 			endTime = action.getDelay() + currentTime;
 		}
@@ -71,9 +71,17 @@ public class TimeQueue {
 	
 	public void addAction(GenericAction action) {
 		if (action != null) {
+			action.begin();
 			actionQueue.addLast(actionHolderPool.get(action));
 			actionQueue.sort(cmp);
 		}
+	}
+	
+	/**
+	 * Do not modify result!
+	 */
+	public LinkedList<ActionHolder> getActions() {
+		return actionQueue;
 	}
 	
 	public List<GenericAction> getCurrentActions() {

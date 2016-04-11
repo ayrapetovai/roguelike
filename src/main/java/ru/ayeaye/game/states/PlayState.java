@@ -36,6 +36,7 @@ import ru.ayeaye.game.display.widgets.ContextWidget;
 import ru.ayeaye.game.display.widgets.GameLogWidget;
 import ru.ayeaye.game.display.widgets.InventoryWidget;
 import ru.ayeaye.game.display.widgets.TerrainWidget;
+import ru.ayeaye.game.display.widgets.TimeQueueWidget;
 import ru.ayeaye.game.display.widgets.Widget;
 import ru.ayeaye.game.gson.ImageDeserializer;
 import ru.ayeaye.game.gson.ImageSerializer;
@@ -76,8 +77,13 @@ public class PlayState extends BasicGameState {
 		GameObject someMonster = new GameObject();
 		someMonster.getTags().add(Tag.CREATURE);
 		someMonster.getTags().add(Tag.DESTRACTABLE);
+		someMonster.getTags().add(Tag.CAN_WALK);
+		someMonster.getTags().add(Tag.CAN_ATTACK);
 		someMonster.getAttributes().put(Attribute.HIT_POINTS_INT, 3);
 		someMonster.getAttributes().put(Attribute.DESCRIPTION_STRING, "minor demon");
+		someMonster.getAttributes().put(Attribute.MOVE_SPEED_FLOAT, 0.6f);
+		someMonster.getAttributes().put(Attribute.ATTACK_POINTS_INT, 1);
+		someMonster.getAttributes().put(Attribute.MELE_ATTACK_SPEED_FLOAT, 1.3f);
 		someMonster.setImage(ImageConstants.getInstance().minorDemon);
 		
 		for (int i = 0; i < height; i++) {
@@ -268,8 +274,11 @@ public class PlayState extends BasicGameState {
 		gameLog.setWidthProportion(0.6f);
 //		gameLog.setBackgroundColor(Color.lightGray);
 		
+		TimeQueueWidget timeQueueWidget = createTimeQueueWidget(gm);
+		
 		prl.addWidget(terrain);
 		prl.addWidget(gameLog);
+		prl.addWidget(timeQueueWidget);
 		
 		Widget logAndTerrain = new Widget("logAndTerrain");
 		logAndTerrain.setLayout(prl);
@@ -312,6 +321,17 @@ public class PlayState extends BasicGameState {
 		GameLogicEngine.getInstance().setModel(gm);
 		
 		return mainFrame;
+	}
+
+	private TimeQueueWidget createTimeQueueWidget(GameModel gm2) {
+		TimeQueueWidget tqw = new TimeQueueWidget("Time Queue", 120, 500);
+		tqw.setOffsetX(10);
+		tqw.setOffsetY(100);
+		tqw.setBackgroundColor(Color.black);
+		
+		tqw.setTimeQueue(gm2.getTimeQueue());
+		
+		return tqw;
 	}
 
 	private ContextWidget createContextWidget(final Widget parent) {
@@ -586,7 +606,7 @@ public class PlayState extends BasicGameState {
 		GameInputListener.getInstance().clearMouse();
 //		}
 		
-		if (delay > 20 * delta) {
+		if (delay > 200 * delta) {
 			delay = 0;
 			GameLogicEngine.getInstance().go();
 		}

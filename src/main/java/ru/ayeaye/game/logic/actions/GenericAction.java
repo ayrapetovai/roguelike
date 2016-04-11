@@ -2,6 +2,9 @@ package ru.ayeaye.game.logic.actions;
 
 import java.util.Map;
 
+import ru.ayeaye.game.model.GameObject;
+import ru.ayeaye.game.model.Tag;
+
 public abstract class GenericAction {
 	protected final Map<ActionParameter, Object> context;
 	protected Algorithm algo;
@@ -12,7 +15,8 @@ public abstract class GenericAction {
 	}
 	
 	public boolean canPutInTimeQueue() {
-		return true;
+		GameObject sourceGO = (GameObject) context.get(ActionParameter.SOURCE_GAME_OBJECT);
+		return !sourceGO.getTags().contains(Tag.BUSY);
 	}
 	
 	public boolean canExecute() {
@@ -33,5 +37,15 @@ public abstract class GenericAction {
 	
 	public Algorithm getAlgo() {
 		return algo;
+	}
+
+	public void begin() {
+		GameObject sourceGO = (GameObject) context.get(ActionParameter.SOURCE_GAME_OBJECT);
+		sourceGO.getTags().add(Tag.BUSY);
+	}
+
+	public void end() {
+		GameObject sourceGO = (GameObject) context.get(ActionParameter.SOURCE_GAME_OBJECT);
+		sourceGO.getTags().remove(Tag.BUSY);
 	}
 }
