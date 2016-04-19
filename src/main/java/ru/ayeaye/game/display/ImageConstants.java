@@ -20,8 +20,8 @@ public class ImageConstants {
 		return instance;
 	}
 	
-	public static int cellWidthInPixels = 64;
-	public static int cellHeightInPixels = 64;
+	public static int cellWidthInPixels = 2*64;
+	public static int cellHeightInPixels = 2*64;
 	
 	public static int fontHeightInPixels = -1; // InitState
 	public static int fontWidthInPixels = -1; // InitState
